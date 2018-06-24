@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 class ContractForm extends React.Component {
 
   constructor() {
@@ -15,19 +14,16 @@ class ContractForm extends React.Component {
   }
 
   parentContractSubmit(formData, onSuccess, onError){
-
     $.ajax({
       url: "/contracts",
       dataType: 'json',
       type: 'POST',
       data: formData,
-
-      success = (contracts) => {
+      success: (contracts) => {
         this.setState({contracts: contracts});
         onSuccess();
       },
-
-      error = (response, status, err) => {
+      error: (response, status, err) => {
         onError(response.responseJSON)
       }
 
@@ -41,13 +37,11 @@ class ContractForm extends React.Component {
       dataType: 'json',
       type: 'PATCH',
       data: formData,
-
-      success = (projects) => {
+      success: (projects) => {
         this.setState({contracts: projects, showNewForm: false});
         onSuccess();
       },
-
-      error = (response, status, err) => {
+      error: (response, status, err) => {
         onError(response.responseJSON)
       }
     });

@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 class ContractForm extends React.Component {
 
   constructor() {
@@ -8,7 +7,11 @@ class ContractForm extends React.Component {
       name: '',
       phone: '',
       address: '',
+      formErrors: {}
     }
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.handleAddressChange = this.handleAddressChange.bind(this);
   }
 
   handleValidationError(formErrorObj) {
@@ -35,24 +38,24 @@ class ContractForm extends React.Component {
     this.setState({address: e.target.value});
   }
 
-  renderFieldErrors(attr) {
-    if(this.setState.formErrors[attr]){
-      return(
-        this.state.formErrors[attr].map(function(error, i){
-          return(
-            <span key={i} className="help-block">
-              {error}
-            </span>
-          );
-        })
-      );
-    }
-    else{
-      return "";
-    }
-  }
+  // renderFieldErrors(attr) {
+  //   if(this.setState.formErrors[attr]){
+  //     return(
+  //       this.state.formErrors[attr].map(function(error, i){
+  //         return(
+  //           <span key={i} className="help-block">
+  //             {error}
+  //           </span>
+  //         );
+  //       })
+  //     );
+  //   }
+  //   else{
+  //     return "";
+  //   }
+  // }
 
-  renderContractNameField(){
+  renderContractNameField = () => {
     let formGroupClass = this.state.formErrors["name"] ? "form-group has-error" : "form-group"
     return(
       <div className= {formGroupClass}>
@@ -66,13 +69,13 @@ class ContractForm extends React.Component {
           className="string form-control"
         />
 
-        {this.renderFieldErrors("name")}
+        {/* {this.renderFieldErrors("name")} */}
 
       </div>
     );
   }
 
-  renderContractPhoneField(){
+  renderContractPhoneField = () => {
     let formGroupClass = this.state.formErrors["phone"] ? "form-group has-error" : "form-group"
     return(
       <div className= {formGroupClass}>
@@ -86,13 +89,13 @@ class ContractForm extends React.Component {
           className="string form-control"
         />
 
-        {this.renderFieldErrors("phone")}
+        {/* {this.renderFieldErrors("phone")} */}
 
       </div>
     );
   }
 
-  renderContractAddressField(){
+  renderContractAddressField = () => {
     let formGroupClass = this.state.formErrors["address"] ? "form-group has-error" : "form-group"
     return(
       <div className= {formGroupClass}>
@@ -106,7 +109,7 @@ class ContractForm extends React.Component {
           className="string form-control"
         />
 
-        {this.renderFieldErrors("address")}
+        {/* {this.renderFieldErrors("address")} */}
 
       </div>
     );
@@ -123,11 +126,11 @@ class ContractForm extends React.Component {
             <div className='form-inputs'/>
 
 
-              {this.renderProjectNameField()}
+              { this.renderContractNameField() }
 
-              {this.renderProjectDescriptionField()}
+              { this.renderContractPhoneField() }
 
-              {this.renderProjectCostField()}
+              { this.renderContractAddressField() }
 
 
             <div className='row'>
