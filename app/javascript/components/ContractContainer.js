@@ -1,6 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
-class ContractForm extends React.Component {
+
+import ContractForm from './contract_form';
+
+class ContractContainer extends React.Component {
 
   constructor() {
     super()
@@ -57,11 +59,11 @@ class ContractForm extends React.Component {
     return (
       <React.Fragment>
         <div>
-          
+          { ContractForm(parentContractSubmit = this.parentContractSubmit) }
         </div>
       </React.Fragment>
     );
   }
 }
 
-export default ContractForm
+export default ContractContainer

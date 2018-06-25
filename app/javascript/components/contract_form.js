@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
+
 class ContractForm extends React.Component {
 
   constructor() {
@@ -123,11 +123,11 @@ class ContractForm extends React.Component {
             <div className='form-inputs'/>
 
 
-              {this.renderProjectNameField()}
+              {this.renderContractNameField()}
 
-              {this.renderProjectDescriptionField()}
+              {this.renderContractPhoneField()}
 
-              {this.renderProjectCostField()}
+              {this.renderContractAddressField()}
 
 
             <div className='row'>
