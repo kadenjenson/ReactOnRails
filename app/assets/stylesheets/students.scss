@@ -1,0 +1,99 @@
+@import "bootstrap";
+
+// MIXINS START
+
+@mixin centering {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+// MIXINS END
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+#app-wrapper {
+	margin-right: 16%;
+	margin-left: 16%;
+}
+
+#header {
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: black;
+}
+
+#nav-bar {
+	margin-top: 30px;
+	color: #00CB79;
+}
+
+.for-navbar {
+	@include centering
+}
+
+.nav-item {
+	float: left;
+	height: 110px !important;
+	margin-right: 5%;
+	margin-left: 5%;
+	text-align: center;
+}
+
+.status-icons {
+	width: 40px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	height: 40px !important;
+	max-height: 40px;
+	border: 1px solid LightGrey;
+	margin-right: auto;
+	margin-left: auto;
+	box-sizing: border-box;
+	text-align: center;
+	transform-orgin: center;
+	transform: rotate(45deg);
+}
+
+.status-icons p {
+	transform-orgin: center;
+	transform: rotate(-45deg);
+}
+
+.nav-info {
+	margin-top: 15px;
+	line-height: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
