@@ -1,44 +1,40 @@
-<div id="header"></div>
+<div id="header"><%= image_tag "bottega-white-logo.png", width: 92, height: 14 %></div>
 
 <div id="nav-bar">
 	<div class="for-navbar">
 		<span class="nav-item">
-			<div class="status-icons">
-				<% if current_page?(new_student_path) %>
-					<p>1</p>
-				<% end %>
+			<div class="status-icons <%= 'active-icon' if current_page?(root_path) %>">
+				<p>1</p>
 			</div>
-				<p class="nav-info">Application<br/>Form</p>
+				<p class="nav-info <%= 'active-text' if current_page?(root_path) %>">Application<br/>Form</p>
 		</span>
 
 		<span class="nav-item">
-			<div class="status-icons">
-				<% if current_page?(@student) %>
-					<p>2</p>
-				<% end %>
+			<div class="status-icons <%= 'active-icon' if current_page?(@student) %>">
+				<p>2</p>
 			</div>
-				<p class="nav-info">Contract<br/>Agreement</p>
+				<p class="nav-info <%= 'active-text' if current_page?(@student) %>">Contract<br/>Agreement</p>
 		</span>
 
 		<span class="nav-item">
-			<div class="status-icons">
+			<div class="status-icons <%= 'active-icon' if current_page?(pages_account_path) %>">
 				<p>3</p>
 			</div>
-				<p class="nav-info">Account<br/>Set-Up</p>
+				<p class="nav-info <%= 'active-text' if current_page?(pages_account_path) %>">Account<br/>Set-Up</p>
 		</span>
 
 		<span class="nav-item">
-			<div class="status-icons">
+			<div class="status-icons <%= 'active-icon' if current_page?(pages_finance_path) %>">
 				<p>4</p>
 			</div>
-				<p class="nav-info">Financial<br/>Guidance</p>
+				<p class="nav-info <%= 'active-text' if current_page?(pages_finance_path) %>">Financial<br/>Guidance</p>
 		</span>
 
 		<span class="nav-item">
-			<div class="status-icons">
+			<div class="status-icons <%= 'active-icon' if current_page?(pages_review_path) %>">
 				<p>5</p>
 			</div>
-				<p class="nav-info">Review</p>
+				<p class="nav-info <%= 'active-text' if current_page?(pages_review_path) %>">Review</p>
 		</span>
 	</div>
 </div>

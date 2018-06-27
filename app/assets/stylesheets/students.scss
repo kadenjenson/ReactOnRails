@@ -2,6 +2,9 @@
 
 // MIXINS START
 
+$green-highlights: #00CB79;
+$border-color: 3px solid #00CB79;
+
 @mixin centering {
   display: flex;
   flex-wrap: wrap;
@@ -27,20 +30,23 @@ body {
 }
 
 #app-wrapper {
-	margin-right: 16%;
-	margin-left: 16%;
+	margin-right: 15%;
+	margin-left: 15%;
 }
 
 #header {
 	width: 100%;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 15px;
+	padding-bottom: 18px;
 	background-color: black;
+}
+
+#header img {
+	margin-left: 2%;
 }
 
 #nav-bar {
 	margin-top: 30px;
-	color: #00CB79;
 }
 
 .for-navbar {
@@ -50,8 +56,8 @@ body {
 .nav-item {
 	float: left;
 	height: 110px !important;
-	margin-right: 5%;
-	margin-left: 5%;
+	margin-right: 3.5%;
+	margin-left: 3.5%;
 	text-align: center;
 }
 
@@ -61,11 +67,12 @@ body {
 	padding-bottom: 8px;
 	height: 40px !important;
 	max-height: 40px;
-	border: 1px solid LightGrey;
+	border: 1px solid #999999;
 	margin-right: auto;
 	margin-left: auto;
 	box-sizing: border-box;
 	text-align: center;
+	color: #999999;
 	transform-orgin: center;
 	transform: rotate(45deg);
 }
@@ -75,12 +82,21 @@ body {
 	transform: rotate(-45deg);
 }
 
+.active-icon {
+	border: $border-color;
+	color: $green-highlights;
+	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+}
+
 .nav-info {
 	margin-top: 15px;
 	line-height: 17px;
+	color: #999999;
 }
 
-
+.active-text {
+	color: $green-highlights;
+}
 
 
 
