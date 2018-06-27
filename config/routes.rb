@@ -6,6 +6,5 @@ Rails.application.routes.draw do
   get 'pages/review'
 
   resources :students
-  resources :contracts
   root to: 'students#new'
 end

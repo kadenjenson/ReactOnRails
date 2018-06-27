@@ -1,90 +1,108 @@
 <%= form_with(model: student, local: true) do |form| %>
   <% if student.errors.any? %>
-    <% student.errors.full_messages.each do |message| %>
-      <%= message %>
-    <% end %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
 
-<div class="form-row">
-  <div class="col-md-6 mb-4">
-    <p>First Name</p>
-    <%= form.text_field :f_name, id: :student_f_name, class: 'form-input' %>
+  <div class="form-row">
+    <div class="col-md-6 mb-4">
+      <p>First Name</p>
+      <%= form.text_field :f_name, id: :student_f_name, class: 'form-input' %>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <p>Last Name</p>
+      <%= form.text_field :l_name, id: :student_l_name, class: 'form-input' %>
+    </div>
   </div>
 
-  <div class="col-md-6 mb-4">
-    <p>Last Name</p>
-    <%= form.text_field :l_name, id: :student_l_name, class: 'form-input' %>
-  </div>
-</div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :student_phone %>
+  <div class="mb-4">
+    <p>Email</p>
+    <%= form.text_field :email, id: :student_email, class: 'form-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :address_one %>
-    <%= form.text_field :address_one, id: :student_address_one %>
+  <div class="mb-4">
+    <p>Phone #</p>
+    <%= form.text_field :phone, id: :student_phone, class: 'form-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :address_two %>
-    <%= form.text_field :address_two, id: :student_address_two %>
+  <div class="mb-3">
+    <p>Street Address One</p>
+    <%= form.text_field :address_one, id: :student_address_one, class: 'form-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :student_email %>
+  <div class="mb-3">
+    <p>Street Address Two</p>
+    <%= form.text_field :address_two, id: :student_address_two, placeholder: 'Apartment #, Suite, etc.', class: 'form-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :student_city %>
-  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <p>City</p>
+      <%= form.text_field :city, id: :student_city, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state, id: :student_state %>
-  </div>
+    <div class="col-md-4 mb-3">
+      <p>State</p>
+      <%= form.text_field :state, id: :student_state, class: 'form-input' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :zip %>
-    <%= form.text_field :zip, id: :student_zip %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dob %>
-    <%= form.date_select :dob, id: :student_dob %>
+    <div class="col-md-4 mb-3">
+      <p>Zip Code</p>
+      <%= form.text_field :zip, id: :student_zip, class: 'form-input' %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :course %>
-    <%= form.number_field :course, id: :student_course %>
+    <p>Date of Birth</p>
+    <%= form.date_select :dob,
+                          id: :student_dob,
+                          start_year: Date.today.year - 70,
+                          end_year: Date.today.year - 18,
+                          include_blank: true,
+                          class: 'form-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :military_status %>
-    <%= form.number_field :military_status, id: :student_military_status %>
+    <p>Gender</p>
+    <%= form.number_field :gender, id: :student_gender, class: 'form-input' %>
+  </div>
+
+  <!-- <div class="field">
+    <p>Course</p>
+    <%= form.number_field :course, id: :student_course, class: 'form-input' %>
+  </div> -->
+
+  <div class="field">
+    <p>Military Service</p>
+    <%= form.number_field :military_status, id: :student_military_status, class: 'form-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :education %>
-    <%= form.number_field :education, id: :student_education %>
+    <p>Highest Education Level</p>
+    <%= form.number_field :education, id: :student_education, class: 'form-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :experience %>
-    <%= form.number_field :experience, id: :student_experience %>
+    <p>Previous Coding Experience</p>
+    <%= form.number_field :experience, id: :student_experience, class: 'form-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :employment_status %>
-    <%= form.number_field :employment_status, id: :student_employment_status %>
+    <p>Current Employment Status</p>
+    <%= form.number_field :employment_status, id: :student_employment_status, class: 'form-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :salary %>
-    <%= form.number_field :salary, id: :student_salary %>
+    <p>Current Income</p>
+    <%= form.number_field :salary, id: :student_salary, class: 'form-input' %>
   </div>
 
   <div class="actions">

@@ -3,10 +3,10 @@
 <div id="nav-bar">
 	<div class="for-navbar">
 		<span class="nav-item">
-			<div class="status-icons <%= 'active-icon' if current_page?(root_path) %>">
+			<div class="status-icons <%= 'active-icon' if current_page?(root_path) %><%= 'active-icon' if current_page?(new_student_path) %>">
 				<p>1</p>
 			</div>
-				<p class="nav-info <%= 'active-text' if current_page?(root_path) %>">Application<br/>Form</p>
+				<p class="nav-info <%= 'active-text' if current_page?(root_path) %><%= 'active-text' if current_page?(new_student_path) %>">Application<br/>Form</p>
 		</span>
 
 		<span class="nav-item">
