@@ -1,25 +1,21 @@
 <%= form_with(model: student, local: true) do |form| %>
   <% if student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <% student.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
   <% end %>
 
-  <div class="field">
-    <%= form.label :f_name %>
-    <%= form.text_field :f_name, id: :student_f_name %>
+<div class="form-row">
+  <div class="col-md-6 mb-4">
+    <p>First Name</p>
+    <%= form.text_field :f_name, id: :student_f_name, class: 'form-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :l_name %>
-    <%= form.text_field :l_name, id: :student_l_name %>
+  <div class="col-md-6 mb-4">
+    <p>Last Name</p>
+    <%= form.text_field :l_name, id: :student_l_name, class: 'form-input' %>
   </div>
+</div>
 
   <div class="field">
     <%= form.label :phone %>
@@ -95,3 +91,20 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

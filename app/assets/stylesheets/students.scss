@@ -15,6 +15,8 @@ $border-color: 3px solid #00CB79;
 
 // MIXINS END
 
+// GLOBAL STYLES START
+
 html,
 body {
 	width: 100%;
@@ -28,6 +30,10 @@ body {
 *:after {
   box-sizing: border-box;
 }
+
+// GLOBAL STYLES END
+
+// HEADER STYLES START
 
 #app-wrapper {
 	margin-right: 15%;
@@ -98,7 +104,43 @@ body {
 	color: $green-highlights;
 }
 
+// HEADER STYLES END
 
+#new-form-card {
+	width: 660px;
+	height: 1030px;
+	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.form-header {
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: black;
+}
+
+.form-header p {
+	color: #FFFFFF;
+	font-size: 20px;
+	margin-bottom: 0;
+	margin-left: 50px;
+}
+
+.new-student-form-fields {
+	padding-top: 40px;
+	padding-right: 3%;
+	padding-left: 3%;
+}
+
+.form-row p {
+	margin-bottom: 0;
+}
+
+.form-input {
+	width: 100%;
+}
 
 
 
