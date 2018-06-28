@@ -13,6 +13,19 @@ $border-color: 3px solid #00CB79;
   @content;
 }
 
+@mixin date {
+	float: left;
+	background: transparent;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0;
+	border: 1px solid #999999 !important;
+	height: 40px;
+	width: 196px;
+	// margin-right: 4px;
+	// margin-left: 4px;
+}
+
 // MIXINS END
 
 // GLOBAL STYLES START
@@ -106,9 +119,10 @@ body {
 
 // HEADER STYLES END
 
+// FORM STYLES START
+
 #new-form-card {
 	width: 660px;
-	height: 1030px;
 	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 	margin-right: auto;
 	margin-left: auto;
@@ -143,7 +157,36 @@ body {
 
 .form-input {
 	width: 100%;
+	height: 40px;
 }
+
+.date-fields {
+	@include centering {
+		position: relative;
+	}
+}
+
+// .date-fields select {
+// 	width: 196px;
+// }
+
+select#student_dob_2i {
+	@include date
+}
+
+select#student_dob_3i {
+	@include date
+}
+
+select#student_dob_1i {
+	@include date
+}
+
+// FORM STYLES END
+
+
+
+
 
 
 
