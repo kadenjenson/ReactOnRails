@@ -142,6 +142,16 @@ body {
 	width: 100%;
 }
 
+.scrolling-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: wrap;
+  
+  .card {
+    display: inline-block;
+  }
+}
+
 
 
 

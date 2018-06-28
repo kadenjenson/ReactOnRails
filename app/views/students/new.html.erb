@@ -1,10 +1,7 @@
 <div id="new-form-card">
 	<div class="form-header"><p>Applicant Information_</p></div>
-	<div class="new-student-form-fields">
-		<form>
-			<%= render 'form', student: @student %>
-		</form>
-
+	<div class="new-student-form-fields">	
+		<%= render 'form', student: @student %>
 		<%= link_to 'Back', students_path %>
 	</div>
 </div>
