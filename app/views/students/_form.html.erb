@@ -36,77 +36,84 @@
         <%= form.text_field :phone, id: :student_phone, class: 'form-input' %>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-4">
         <p>Street Address One</p>
         <%= form.text_field :address_one, id: :student_address_one, class: 'form-input' %>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-4">
         <p>Street Address Two</p>
         <%= form.text_field :address_two, id: :student_address_two, placeholder: 'Apartment #, Suite, etc.', class: 'form-input' %>
       </div>
 
       <div class="form-row">
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-4">
           <p>City</p>
           <%= form.text_field :city, id: :student_city, class: 'form-input' %>
         </div>
 
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-4">
           <p>State</p>
           <%= form.text_field :state, id: :student_state, class: 'form-input' %>
         </div>
 
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-4">
           <p>Zip Code</p>
           <%= form.text_field :zip, id: :student_zip, class: 'form-input' %>
         </div>
       </div>
 
-      <div class="date-fields mb-4">
-        <p>Date of Birth</p>
-          <%= form.date_select :dob,
-                                id: :student_dob,
-                                start_year: Date.today.year - 70,
-                                end_year: Date.today.year - 18,
-                                order: [:month, :day, :year] 
-                                  %>
+      <div id="date-field-box">
+        <div class="date-fields">
+          <p>Date of Birth</p>
+            <%= form.date_select :dob, 
+                                  id: :student_dob, 
+                                  start_year: Date.today.year - 70, 
+                                  end_year: Date.today.year - 18, 
+                                  order: [:month, :day, :year] %>
+        </div>
       </div>
 
-      <div class="field">
-        <p>Gender</p>
-        <%= form.number_field :gender, id: :student_gender, class: 'form-input' %>
+      <div class="form-row mb-4">
+        <div class="col-md-6">
+          <p>Gender</p>
+          <%= form.number_field :gender, id: :student_gender, class: 'form-input' %>
+        </div>
+
+        <div class="col-md-6">
+          <p>Military Service</p>
+          <%= form.number_field :military_status, id: :student_military_status, class: 'form-input' %>
+        </div>
       </div>
 
-      <div class="field">
-        <p>Military Service</p>
-        <%= form.number_field :military_status, id: :student_military_status, class: 'form-input' %>
+      <div class="form-row mb-4">
+        <div class="col-md-6">
+          <p>Highest Education Level</p>
+          <%= form.number_field :education, id: :student_education, class: 'form-input' %>
+        </div>
+
+        <div class="col-md-6">
+          <p>Previous Coding Experience</p>
+          <%= form.number_field :experience, id: :student_experience, class: 'form-input' %>
+        </div>
       </div>
 
-      <div class="field">
-        <p>Highest Education Level</p>
-        <%= form.number_field :education, id: :student_education, class: 'form-input' %>
-      </div>
+      <div class="form-row mb-4">
+        <div class="col-md-6">
+          <p>Current Employment Status</p>
+          <%= form.number_field :employment_status, id: :student_employment_status, class: 'form-input' %>
+        </div>
 
-      <div class="field">
-        <p>Previous Coding Experience</p>
-        <%= form.number_field :experience, id: :student_experience, class: 'form-input' %>
-      </div>
-
-      <div class="field">
-        <p>Current Employment Status</p>
-        <%= form.number_field :employment_status, id: :student_employment_status, class: 'form-input' %>
-      </div>
-
-      <div class="field">
-        <p>Current Income</p>
-        <%= form.number_field :salary, id: :student_salary, class: 'form-input' %>
+        <div class="col-md-6">
+          <p>Current Income</p>
+          <%= form.number_field :salary, id: :student_salary, class: 'form-input' %>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="btn-box">
+    <%= form.submit "Continue", class: 'save-student-btn' %>
   </div>
 <% end %>
 
