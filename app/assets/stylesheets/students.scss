@@ -216,11 +216,19 @@ select#student_dob_1i {
 
 // FORM STYLES END
 
+// SHOW STYLES START
 
+.scrolling-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: wrap;
+  
+  .card {
+    display: inline-block;
+  }
+}
 
-
-
-
+// SHOW STYLES END
 
 
 
