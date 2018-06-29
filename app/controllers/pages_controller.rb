@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
   def review
   end
+
+  def contract_agreement
+  end
 end
