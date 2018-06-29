@@ -43,22 +43,23 @@
       Accreditation is designed to help educational institutions boost their ongoing performance efforts for the benefit of their students. Accreditation matters because our students deserve the highest level of educational excellence possible.</p>
 <center><p>
 <h4>STUDENT INFORMATION</h4></p></center>
-<center><p>
-STUDENT NAME:   _____________________________________________________
+<aside><p>
+STUDENT NAME:   _<%= @student.f_name %> <%= @student.l_name %>__
 <br>
-ADDRESS:  _____________________________________________________
+ADDRESS:  _<%= @student.address_one %> <%= @student.address_two %>_
 <br>
-CITY:   _________________STATE: _____________ ZIP: ____________
+CITY:   _<%= @student.city %>_STATE: _<%= @student.state %>_ ZIP: _<%= @student.zip %>_
 <br>
-HOME PHONE:   _________________ CELL PHONE: ____________________
+HOME PHONE:   _<%= @student.phone %>_ CELL PHONE: _<%= @student.phone %>_
 <br>
-DATE OF BIRTH:  __________________ E-MAIL: 
-____________________________
+DATE OF BIRTH:  _<%= @student.dob %>_ 
+<aside>E-MAIL: _<%= @student.email %>_</aside>
 <br>
 EMERGENCY CONTACT:  _____________________________________________________
 <br>
-RELATIONSHIP: _____________________ PHONE: _________________________
-</p></center>
+RELATIONSHIP: _____________________ <aside>PHONE: _________________________</aside>
+
+</p></aside>
 <br>
 
 <center>
@@ -177,7 +178,7 @@ The full curriculum. You will learn the foundation level of the main programming
 
 <p>This engagement model includes online support. Our response times will vary based on time & day when support is requested. Bottega reserves the right to adjust service times as needed as well as determine if individual users are abusing the support mechanism to avoid making the effort to learn on their own.</p>
 <b><p>COURSE STUDENT IS ENROLLING IN</b></p>
-<p>COURSE STUDENT IS ENROLLING in:_________________________</p>
+<p>COURSE STUDENT IS ENROLLING in:_<%= @student.course %>_</p>
 <p>ENGAGEMENT MODEL: _________________________</p>
 <br>
 <br>
