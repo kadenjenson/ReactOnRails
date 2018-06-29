@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(version: 20180625180143) do
     t.string "state"
     t.string "zip"
     t.date "dob"
-    t.integer "course"
-    t.integer "military_status"
-    t.integer "education"
-    t.integer "experience"
-    t.integer "employment_status"
-    t.integer "salary"
-    t.integer "gender"
+    t.string "course"
+    t.string "military_status"
+    t.string "education"
+    t.string "experience"
+    t.string "employment_status"
+    t.string "salary"
+    t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

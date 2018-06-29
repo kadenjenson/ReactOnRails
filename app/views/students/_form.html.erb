@@ -70,43 +70,44 @@
                                   id: :student_dob, 
                                   start_year: Date.today.year - 70, 
                                   end_year: Date.today.year - 18, 
-                                  order: [:month, :day, :year] %>
+                                  order: [:month, :day, :year],
+                                  include_blank: true %>
         </div>
       </div>
 
       <div class="form-row mb-4">
         <div class="col-md-6">
           <p>Gender</p>
-          <%= form.number_field :gender, id: :student_gender, class: 'form-input' %>
+          <%= form.select :gender, id: :student_gender, class: 'form-input' %>
         </div>
 
         <div class="col-md-6">
           <p>Military Service</p>
-          <%= form.number_field :military_status, id: :student_military_status, class: 'form-input' %>
+          <%= form.select :military_status, id: :student_military_status, class: 'form-input' %>
         </div>
       </div>
 
       <div class="form-row mb-4">
         <div class="col-md-6">
           <p>Highest Education Level</p>
-          <%= form.number_field :education, id: :student_education, class: 'form-input' %>
+          <%= form.select :education, id: :student_education, class: 'form-input' %>
         </div>
 
         <div class="col-md-6">
           <p>Previous Coding Experience</p>
-          <%= form.number_field :experience, id: :student_experience, class: 'form-input' %>
+          <%= form.select :experience, id: :student_experience, class: 'form-input' %>
         </div>
       </div>
 
       <div class="form-row mb-4">
         <div class="col-md-6">
           <p>Current Employment Status</p>
-          <%= form.number_field :employment_status, id: :student_employment_status, class: 'form-input' %>
+          <%= form.select :employment_status, id: :student_employment_status, class: 'form-input' %>
         </div>
 
         <div class="col-md-6">
           <p>Current Income</p>
-          <%= form.number_field :salary, id: :student_salary, class: 'form-input' %>
+          <%= form.select(:salary, options_for_select([['20k', '20k'], ['30k', '30k']]), { include_blank: true }) %>
         </div>
       </div>
     </div>
