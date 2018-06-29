@@ -8,6 +8,5 @@ Rails.application.routes.draw do
   get 'pages/contract_agreement'
 
   resources :students
-  resources :contracts
   root to: 'students#new'
 end

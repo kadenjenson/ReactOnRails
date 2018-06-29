@@ -13,6 +13,20 @@ $border-color: 3px solid #00CB79;
   @content;
 }
 
+@mixin date {
+	box-sizing: border-box;
+	float: left;
+	height: 40px;
+	width: 200px !important;
+	padding: 0px 15px;
+	background: transparent;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0;
+	border: 1px solid #999999 !important;
+	@content;
+}
+
 // MIXINS END
 
 // GLOBAL STYLES START
@@ -91,7 +105,6 @@ body {
 .active-icon {
 	border: $border-color;
 	color: $green-highlights;
-	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 }
 
 .nav-info {
@@ -106,9 +119,10 @@ body {
 
 // HEADER STYLES END
 
+// FORM STYLES START
+
 #new-form-card {
 	width: 660px;
-	height: 1030px;
 	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 	margin-right: auto;
 	margin-left: auto;
@@ -132,15 +146,77 @@ body {
 	padding-top: 40px;
 	padding-right: 3%;
 	padding-left: 3%;
+	padding-bottom: 40px;
 }
 
-.form-row p {
-	margin-bottom: 0;
+.new-student-form-fields p {
+	margin-bottom: 5px;
+	color: #1A1A1A;
+	font-size: 13px;
+	font-weight: 300;
 }
 
-.form-input {
+.new-student-form-fields input[type=text], input[type=number] {
 	width: 100%;
+	padding: 8px 15px;
+	border: 1px solid #999999;
+	box-sizing: border-box;
 }
+
+.new-student-form-fields input[type=text]:focus, input[type=number]:focus {
+	border: 2px solid $green-highlights;
+	outline: none;
+}
+
+#date-field-box {
+	margin-bottom: 65px;
+}
+
+.date-fields select {
+	@include centering {
+		position: relative;
+	}
+}
+
+select#student_dob_2i {
+	@include date {
+		margin-right: 10px;
+	}
+}
+
+select#student_dob_3i {
+	@include date {
+		margin-right: 10px;
+	}
+}
+
+select#student_dob_1i {
+	@include date
+}
+
+.btn-box {
+	@include centering
+}
+
+.btn-box {
+	width: 100%;
+	padding: 70px 0px 70px 0px;
+}
+
+.save-student-btn {
+	width: 235px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: $green-highlights;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	border: none;
+	color: white;
+	text-align: center;
+}
+
+// FORM STYLES END
+
+// SHOW STYLES START
 
 .scrolling-wrapper {
   overflow-x: hidden;
@@ -152,7 +228,7 @@ body {
   }
 }
 
-
+// SHOW STYLES END
 
 
 
