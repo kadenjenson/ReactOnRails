@@ -16,14 +16,17 @@ $border-color: 3px solid #00CB79;
 @mixin date {
 	box-sizing: border-box;
 	float: left;
+	width: 100%;
 	height: 40px;
-	width: 200px !important;
 	padding: 0px 15px;
 	background: transparent;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0 !important;
 	border-radius: 0;
 	border: 1px solid #999999 !important;
+	outline: none;
+	background: image_url('dropdown-icon.png') 96% / 15% no-repeat;
+	background-size: 15px 9px;
 	@content;
 }
 
@@ -156,7 +159,7 @@ body {
 	font-weight: 300;
 }
 
-.new-student-form-fields input[type=text], select {
+.new-student-form-fields input[type=text] {
 	width: 100%;
 	padding: 8px 15px;
 	border: 1px solid #999999;
@@ -167,8 +170,24 @@ body {
 	}
 }
 
+#contact-info {
+	margin-bottom: 65px;
+}
+
+#location {
+	margin-bottom: 65px;
+}
+
 #date-field-box {
 	margin-bottom: 65px;
+}
+
+#select-fields select {
+	@include date
+}
+
+#select-fields select:focus {
+	border: 2px solid $green-highlights !important;
 }
 
 .date-fields select {
@@ -178,19 +197,17 @@ body {
 }
 
 select#student_dob_2i {
-	@include date {
-		margin-right: 10px;
-	}
+	margin-right: 10px;
+	width: 200px !important;
 }
 
 select#student_dob_3i {
-	@include date {
-		margin-right: 10px;
-	}
+	margin-right: 10px;
+	width: 200px !important;
 }
 
 select#student_dob_1i {
-	@include date
+	width: 200px !important;
 }
 
 .btn-box {
