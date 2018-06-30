@@ -75,7 +75,7 @@
               <%= form.date_select :dob, 
                                     id: :student_dob, 
                                     start_year: Date.today.year - 70, 
-                                    end_year: Date.today.year - 18, 
+                                    end_year: Date.today.year - 17, 
                                     order: [:month, :day, :year],
                                     include_blank: true %>
           </div>
@@ -91,7 +91,7 @@
 
           <div class="col-md-6">
             <p>Military Service</p>
-            <%= form.select(:military_status, options_for_select([['Active', 'Active Duty'],
+            <%= form.select(:military_status, options_for_select([['Active Duty', 'Active'],
                                                                   ['Veteran', 'Veteran'],
                                                                   ['Active Reserve', 'Active Reserve'],
                                                                   ['Inactive Reserve', 'Inactive Reserve'],
