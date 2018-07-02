@@ -25,8 +25,17 @@ $border-color: 3px solid #00CB79;
 	border-radius: 0;
 	border: 1px solid #999999 !important;
 	outline: none;
-	background: image_url('dropdown-icon.png') 96% / 15% no-repeat;
-	background-size: 15px 9px;
+	background: image_url('dropdown-icon.svg') 96% / 15% no-repeat;
+	background-size: 14px 8.5px;
+	@content;
+}
+
+@mixin cards {
+	position: relative;
+	width: 660px;
+	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+	margin-right: auto;
+	margin-left: auto;
 	@content;
 }
 
@@ -84,9 +93,13 @@ body {
 	text-align: center;
 }
 
+.nav-item p {
+	font-size: 14px;
+}
+
 .status-icons {
 	width: 40px;
-	padding-top: 8px;
+	padding-top: 9px;
 	padding-bottom: 8px;
 	height: 40px !important;
 	max-height: 40px;
@@ -124,11 +137,80 @@ body {
 
 // FORM STYLES START
 
-#new-form-card {
-	width: 660px;
-	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+#course-card {
+	@include cards {
+		height: 475px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+
+.change-course {
+	width: 100%;
+	padding-top: 19px;
+	padding-bottom: 19px;
+	margin-bottom: 20px;
+	color: #999999;
+	font-size: 14px;
+}
+
+.change-course span {
+	padding-right: 28px;
+}
+
+.course-icon {
+	height: 96px;
+	width: 96px;
 	margin-right: auto;
 	margin-left: auto;
+	background: image_url('python.svg') no-repeat;
+	background-size: 96px 96px;
+}
+
+.course-text {
+	width: 100%;
+	margin-top: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.course-text h2 {
+	font-size: 34px;
+	color: $green-highlights;
+}
+
+.course-text p {
+	font-size: 18px;
+	color: #1A1A1A;
+}
+
+.course-text span {
+	font-size: 14px;
+	font-weight: 300;
+	color: #999999;
+}
+
+.course-info {
+	position: absolute;
+	width: 100%;
+	bottom: 45px;
+	text-align: center;
+}
+
+.course-info p {
+	font-size: 14px;
+	color: $green-highlights;
+	margin-bottom: 7px;
+}
+
+.course-info span {
+	font-size: 16px;
+	color: #808080;
+}
+
+#new-form-card {
+	@include cards
 }
 
 .form-header {
