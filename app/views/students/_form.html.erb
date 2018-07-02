@@ -17,7 +17,7 @@
     </div>
     <div class="course-icon"></div>
     <div class="course-text">
-      <h2>Full Stack <br />Python + JavaScript</h2>
+      <h2>Full Stack<br />Python + JavaScript</h2>
       <p>Full-Time, On-Campus</p>
       <span>Powered by Bottega</span>
     </div>
@@ -38,7 +38,6 @@
   <div id="new-form-card">
     <div class="form-header"><p>Applicant Information_</p></div>
     <div class="new-student-form-fields">
-
       <div id="contact-info">
         <div class="form-row">
           <div class="col-md-6 mb-4">
@@ -128,18 +127,18 @@
           <div class="col-md-6">
             <p>Highest Education Level</p>
             <%= f.select(:education, options_for_select([['N/A', 'N/A'], 
-                                                            ['Highschool or Equivilent', 'Highschool'], 
-                                                            ['Some college', 'Some college'], 
-                                                            ['Associates', 'Associates'], 
-                                                            ['Bachelors', 'Bachelors']]), { include_blank: true }) %>
+                                                          ['Highschool or Equivilent', 'Highschool'], 
+                                                          ['Some college', 'Some college'], 
+                                                          ['Associates', 'Associates'], 
+                                                          ['Bachelors', 'Bachelors']]), { include_blank: true }) %>
           </div>
 
           <div class="col-md-6">
             <p>Previous Coding Experience</p>
             <%= f.select(:experience, options_for_select([['None', 'None'], 
-                                                              ['Tried it once or twice', 'Little'], 
-                                                              ['Well versed in a language', 'Moderate'], 
-                                                              ['Experience in the field', 'Experienced']]), { include_blank: true }) %>
+                                                          ['Tried it once or twice', 'Little'], 
+                                                          ['Well versed in a language', 'Moderate'], 
+                                                          ['Experience in the field', 'Experienced']]), { include_blank: true }) %>
           </div>
         </div>
 
@@ -147,19 +146,19 @@
           <div class="col-md-6">
             <p>Current Employment Status</p>
             <%= f.select(:employment_status, options_for_select([['Employed', 'Employed'], 
-                                                                    ['Unemployed', 'Unemployed']]), { include_blank: true }) %>
+                                                                ['Unemployed', 'Unemployed']]), { include_blank: true }) %>
           </div>
 
           <div class="col-md-6">
             <p>Current Income</p>
-            <%= f.select(:salary, options_for_select([['$15,000', '15k'], 
-                                                          ['$20,000', '20k'],
-                                                          ['$25,000', '25k'], 
-                                                          ['$30,000', '30k'],
-                                                          ['$35,000', '35k'],
-                                                          ['$40,000', '40k'],
-                                                          ['$45,000', '45k'],
-                                                          ['$50,000 or higher', '> 50k']]), { include_blank: true }) %>
+            <%= f.select(:salary, options_for_select([['$15,000', '15k'],
+                                                      ['$20,000', '20k'],
+                                                      ['$25,000', '25k'],
+                                                      ['$30,000', '30k'],
+                                                      ['$35,000', '35k'],
+                                                      ['$40,000', '40k'],
+                                                      ['$45,000', '45k'],
+                                                      ['$50,000 or higher', '> 50k']]), { include_blank: true }) %>
           </div>
         </div>
       </div>
