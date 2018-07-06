@@ -119,18 +119,18 @@
           <div class="col-md-6">
             <p>Gender</p>
             <%= f.select(:gender, options_for_select([['Female', 'Female'],
-                                                          ['Male', 'Male'],
-                                                          ['I dont wish to share', 'N/A']]), { include_blank: true }) %>
+                                                      ['Male', 'Male'],
+                                                      ['I dont wish to share', 'N/A']]), { include_blank: true }) %>
           </div>
 
           <div class="col-md-6">
             <p>Military Service</p>
             <%= f.select(:military_status, options_for_select([['Active Duty', 'Active'],
-                                                                  ['Veteran', 'Veteran'],
-                                                                  ['Active Reserve', 'Active Reserve'],
-                                                                  ['Inactive Reserve', 'Inactive Reserve'],
-                                                                  ['I dont wish to share', 'N/A'],
-                                                                  ['Civilian', 'Civilian']]), { include_blank: true }) %>
+                                                              ['Veteran', 'Veteran'],
+                                                              ['Active Reserve', 'Active Reserve'],
+                                                              ['Inactive Reserve', 'Inactive Reserve'],
+                                                              ['I dont wish to share', 'N/A'],
+                                                              ['Civilian', 'Civilian']]), { include_blank: true }) %>
           </div>
         </div>
 
