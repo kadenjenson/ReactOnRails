@@ -1,9 +1,9 @@
 @import "bootstrap";
 
-// MIXINS START
-
+// --- MIXINS START --- //
 $green-highlights: #00CB79;
 $border-color: 3px solid #00CB79;
+$box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 
 @mixin centering {
   display: flex;
@@ -33,16 +33,14 @@ $border-color: 3px solid #00CB79;
 @mixin cards {
 	position: relative;
 	width: 660px;
-	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+	box-shadow: $box-shadow;
 	margin-right: auto;
 	margin-left: auto;
 	@content;
 }
+// --- MIXINS END --- //
 
-// MIXINS END
-
-// GLOBAL STYLES START
-
+// --- GLOBAL STYLES START --- //
 html,
 body {
 	width: 100%;
@@ -56,11 +54,9 @@ body {
 *:after {
   box-sizing: border-box;
 }
+// --- GLOBAL STYLES END --- //
 
-// GLOBAL STYLES END
-
-// HEADER STYLES START
-
+// --- HEADER STYLES START --- //
 #app-wrapper {
 	margin-right: 15%;
 	margin-left: 15%;
@@ -132,11 +128,10 @@ body {
 .active-text {
 	color: $green-highlights;
 }
+// --- HEADER STYLES END --- //
 
-// HEADER STYLES END
-
-// FORM STYLES START
-
+// --- FORM STYLES START --- //
+// COURSE MODAL CARDS START
 #course-card {
 	@include cards {
 		height: 475px;
@@ -154,8 +149,17 @@ body {
 	font-size: 14px;
 }
 
-.change-course span {
+.float-right {
 	padding-right: 28px;
+}
+
+.trigger {
+	color: #45B0E5;
+	&:hover {
+		color: #0f97db;
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }
 
 .course-icon {
@@ -208,6 +212,49 @@ body {
 	font-size: 16px;
 	color: #808080;
 }
+
+.a-cool-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.content-for-modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal-card {
+	width: 660px;
+	height: 530px;
+	box-shadow: $box-shadow;
+	background-color: white;
+}
+
+.modal-btn-box {
+	@include centering {
+		margin-top: 63px;
+	}
+}
+
+.close-n-save {
+	width: 230px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: $green-highlights;
+	text-align: center;
+	color: white;
+}
+// COURSE MODAL CARDS END //
 
 #new-form-card {
 	@include cards
@@ -311,11 +358,9 @@ select#student_dob_1i {
 	color: white;
 	text-align: center;
 }
+// --- FORM STYLES END --- //
 
-// FORM STYLES END
-
-// SHOW STYLES START
-
+// --- SHOW STYLES START --- //
 .scrolling-wrapper {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -325,8 +370,7 @@ select#student_dob_1i {
     display: inline-block;
   }
 }
-
-// SHOW STYLES END
+// --- SHOW STYLES END --- //
 
 
 

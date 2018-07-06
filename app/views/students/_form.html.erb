@@ -13,7 +13,7 @@
 
   <div id="course-card">
     <div class="change-course">
-      <span class="float-right">Not Correct? <a href="#">Change</a></span>
+      <span class="float-right">Not Correct? <span class="trigger">Change</span></span>
     </div>
     <div class="course-icon"></div>
     <div class="course-text">
@@ -31,6 +31,17 @@
           <p>Start Date</p>
           <span>August 28, 2018</span>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="course-modal" class="a-cool-modal">
+    <div class="content-for-modal">
+      <div class="modal-card">
+        <h1>Hi Im the modal</h1>
+      </div>
+      <div class="modal-btn-box">
+        <span class="close-n-save">Close & Save</span>
       </div>
     </div>
   </div>
@@ -170,7 +181,25 @@
   </div>
 <% end %>
 
+<script>
+  let modal = document.getElementById('course-modal');
+  let btn = document.getElementsByClassName('trigger')[0];
+  let closeButton = document.getElementsByClassName("close-n-save")[0];
 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  closeButton.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
 
 
