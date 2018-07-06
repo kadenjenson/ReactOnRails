@@ -222,8 +222,6 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	transform: scale(1.1);
-	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .content-for-modal {
@@ -234,10 +232,20 @@ body {
 }
 
 .modal-card {
-	width: 660px;
+	width: 700px;
 	height: 530px;
-	box-shadow: $box-shadow;
 	background-color: white;
+}
+
+.modal-card h1 {
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: black;
+	font-weight: 300;
+	font-size: 20px;
+	color: white;
+	padding-left: 50px;
 }
 
 .modal-btn-box {
@@ -253,6 +261,10 @@ body {
 	background-color: $green-highlights;
 	text-align: center;
 	color: white;
+	&:hover {
+		background-color: #00b86e;
+		cursor: pointer;
+	}
 }
 // COURSE MODAL CARDS END //
 
