@@ -3,7 +3,7 @@
 // --- MIXINS START --- //
 $green-highlights: #00CB79;
 $border-color: 3px solid #00CB79;
-$box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+$box-shadow: 0 0 11px rgba(0, 0, 0, 0.4);
 
 @mixin centering {
   display: flex;
@@ -43,7 +43,6 @@ $box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 // --- GLOBAL STYLES START --- //
 html,
 body {
-	width: 100%;
 	height: 100%;
 	margin:0;
 	padding:0;
@@ -132,7 +131,7 @@ body {
 // --- HEADER STYLES END --- //
 
 // --- FORM STYLES START --- //
-// COURSE MODAL CARDS START
+// COURSE MODAL CARD START
 #course-card {
 	@include cards {
 		height: 475px;
@@ -225,7 +224,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.content-for-modal {
+.for-modal {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -247,6 +246,24 @@ body {
 	font-size: 20px;
 	color: white;
 	padding-left: 50px;
+	margin-bottom: 0;
+}
+
+.content-for-modal {
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+.track-icon-box {
+	height: 175px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.track-icon {
+	height: 175px;
+	width: 155px;
+	margin: 0px 2px 0px 2px;
 }
 
 .modal-btn-box {
