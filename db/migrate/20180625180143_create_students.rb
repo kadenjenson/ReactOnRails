@@ -11,7 +11,6 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :state
       t.string :zip
       t.date :dob
-      t.string :course
       t.string :military_status
       t.string :education
       t.string :experience
