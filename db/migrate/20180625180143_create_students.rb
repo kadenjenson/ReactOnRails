@@ -17,6 +17,7 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :employment_status
       t.string :salary
       t.string :gender
+      t.string :format_type
 
       t.timestamps
     end
