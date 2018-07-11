@@ -1,0 +1,70 @@
+<div id="course-card">
+  <div class="change-course">
+    <span class="float-right">Not Correct? <span class="trigger">Change</span></span>
+  </div>
+  <div class="course-icon"></div>
+  <div class="course-text">
+    <h2>Full Stack<br />Python + JavaScript</h2>
+    <p>Full-Time, On-Campus</p>
+    <span>Powered by Bottega</span>
+  </div>
+  <div class="course-info">
+    <div class="form-row">
+      <div class="col-md-6">
+        <p>Course Duration</p>
+        <span>12 Weeks</span>
+      </div>
+      <div class="col-md-6">
+        <p>Start Date</p>
+        <span>August 28, 2018</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="course-modal" class="a-cool-modal">
+  <div class="for-modal">
+    <div class="modal-card">
+      <h1>Track Selection_</h1>
+      <div class="content-for-modal">
+        <div class="track-icon-box">
+          <div class="form-row">
+            <div class="col-md-3">
+              <div class="track-icon">
+                <%= image_tag 'python.svg', width: 43, height: 60 %>
+                <p>Some placeholder text yeeeeeeeeeeeeeeee!</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="track-icon">
+                <%= image_tag 'ruby.svg', width: 43, height: 60 %>
+                <p>Some placeholder text yeeeeeeeeeeeeeeee!</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="track-icon">
+                <%= image_tag 'frontend.svg', width: 43, height: 60 %>
+                <p>Some placeholder text yeeeeeeeeeeeeeeee!</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="track-icon">
+                <%= image_tag 'data_science.svg', width: 43, height: 60 %>
+                <p>Some placeholder text yeeeeeeeeeeeeeeee!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="class-select-fields">
+          <p>Program Format</p>
+          <input type="text" id="ProgramFormat" name="ProgramFormat" placeholder="i.e. Part Time/Full Time">
+          <p>Start Date</p>
+          <input type="date" id="StartDate" name="StartDate">
+        </div>
+      </div>
+    </div>
+    <div class="modal-btn-box">
+      <span class="close-n-save">Close & Save</span>
+    </div>
+  </div>
+</div>
