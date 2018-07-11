@@ -18,8 +18,6 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :salary
       t.string :gender
 
-      t.references :course, foreign_key: true
-
       t.timestamps
     end
   end
