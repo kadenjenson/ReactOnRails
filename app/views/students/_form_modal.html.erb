@@ -57,9 +57,12 @@
         </div>
         <div class="class-select-fields">
           <p>Program Format</p>
-          <input type="text" name="format-select">
+          <%= f.select(:format_type, options_for_select([
+                                                        ["Part-Time", "Part-Time"],
+                                                        ["Full-Time", "Full-Time"]]), 
+                                                        { include_blank: true }) %>
           <p>Start Date</p>
-          <input type="date" id="StartDate" name="StartDate">
+          <%= f.collection_select(:course_id, Course.all, :id, :start_date, { include_blank: true }) %>
         </div>
       </div>
     </div>

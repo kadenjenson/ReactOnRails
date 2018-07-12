@@ -1,9 +1,7 @@
-3.times do |course|
-	Course.create!(
-		name: "Class #{course}",
-		start_date: "08/15/2018"
-		)
-end
+
+Course.create!(name: "Class 1", start_date: (Date.today + 30.days))
+Course.create!(name: "Class 2", start_date: (Date.today + 60.days))
+Course.create!(name: "Class 3", start_date: (Date.today + 90.days))
 
 puts "created 3 courses"
 
