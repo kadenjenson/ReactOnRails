@@ -403,14 +403,30 @@ select#student_dob_1i {
   overflow-x: hidden;
   overflow-y: scroll;
   white-space: wrap;
+  height: 450px;
+  width: 1100px;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
   
   .card {
     display: inline-block;
+    text-align: 12px;
   }
 }
 // --- SHOW STYLES END --- //
 
-
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 8px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 12px;
+}
 
 
 
