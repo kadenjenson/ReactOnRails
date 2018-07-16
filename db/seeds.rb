@@ -84,4 +84,4 @@ end
 		)
 end
 
-puts "10 Students created"
+puts "30 Students created"

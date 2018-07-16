@@ -62,7 +62,7 @@
                                                         ["Full-Time", "Full-Time"]]), 
                                                         { include_blank: true }) %>
           <p>Start Date</p>
-          <%= f.collection_select(:course_id, Course.all, :id, :start_date, { include_blank: true }) %>
+          <%= f.collection_select(:start_id, Start.all, :id, :start_date, { include_blank: true }) %>
         </div>
       </div>
     </div>
