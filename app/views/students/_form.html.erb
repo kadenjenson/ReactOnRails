@@ -1,4 +1,4 @@
-<%= form_with(model: student, local: true) do |form| %>
+<%= form_with(model: student, local: true) do |f| %>
   <% if student.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
@@ -11,125 +11,30 @@
     </div>
   <% end %>
 
-  <div id="new-form-card">
-    <div class="form-header"><p>Applicant Information_</p></div>
-    <div class="new-student-form-fields">
-      <div class="form-row">
-        <div class="col-md-6 mb-4">
-          <p>First Name</p>
-          <%= form.text_field :f_name, id: :student_f_name, class: 'form-input' %>
-        </div>
+  <%= render 'form_modal', f: f %>
 
-        <div class="col-md-6 mb-4">
-          <p>Last Name</p>
-          <%= form.text_field :l_name, id: :student_l_name, class: 'form-input' %>
-        </div>
-      </div>
-
-      <div class="mb-4">
-        <p>Email</p>
-        <%= form.text_field :email, id: :student_email, class: 'form-input' %>
-      </div>
-
-      <div class="mb-4">
-        <p>Phone #</p>
-        <%= form.text_field :phone, id: :student_phone, class: 'form-input' %>
-      </div>
-
-      <div class="mb-4">
-        <p>Street Address One</p>
-        <%= form.text_field :address_one, id: :student_address_one, class: 'form-input' %>
-      </div>
-
-      <div class="mb-4">
-        <p>Street Address Two</p>
-        <%= form.text_field :address_two, id: :student_address_two, placeholder: 'Apartment #, Suite, etc.', class: 'form-input' %>
-      </div>
-
-      <div class="form-row">
-        <div class="col-md-4 mb-4">
-          <p>City</p>
-          <%= form.text_field :city, id: :student_city, class: 'form-input' %>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <p>State</p>
-          <%= form.text_field :state, id: :student_state, class: 'form-input' %>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <p>Zip Code</p>
-          <%= form.text_field :zip, id: :student_zip, class: 'form-input' %>
-        </div>
-      </div>
-
-      <div id="date-field-box">
-        <div class="date-fields">
-          <p>Date of Birth</p>
-            <%= form.date_select :dob, 
-                                  id: :student_dob, 
-                                  start_year: Date.today.year - 70, 
-                                  end_year: Date.today.year - 18, 
-                                  order: [:month, :day, :year] %>
-        </div>
-      </div>
-
-      <div class="form-row mb-4">
-        <div class="col-md-6">
-          <p>Gender</p>
-          <%= form.number_field :gender, id: :student_gender, class: 'form-input' %>
-        </div>
-
-        <div class="col-md-6">
-          <p>Military Service</p>
-          <%= form.number_field :military_status, id: :student_military_status, class: 'form-input' %>
-        </div>
-      </div>
-
-      <div class="form-row mb-4">
-        <div class="col-md-6">
-          <p>Highest Education Level</p>
-          <%= form.number_field :education, id: :student_education, class: 'form-input' %>
-        </div>
-
-        <div class="col-md-6">
-          <p>Previous Coding Experience</p>
-          <%= form.number_field :experience, id: :student_experience, class: 'form-input' %>
-        </div>
-      </div>
-
-      <div class="form-row mb-4">
-        <div class="col-md-6">
-          <p>Current Employment Status</p>
-          <%= form.number_field :employment_status, id: :student_employment_status, class: 'form-input' %>
-        </div>
-
-        <div class="col-md-6">
-          <p>Current Income</p>
-          <%= form.number_field :salary, id: :student_salary, class: 'form-input' %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="btn-box">
-    <%= form.submit "Continue", class: 'save-student-btn' %>
-  </div>
+  <%= render 'main_fields', f: f %>
 <% end %>
 
+<script>
+  let modal = document.getElementById('course-modal');
+  let btn = document.getElementsByClassName('trigger')[0];
+  let closeButton = document.getElementsByClassName("close-n-save")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  closeButton.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>

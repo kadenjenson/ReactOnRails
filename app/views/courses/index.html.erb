@@ -1,0 +1,20 @@
+<h1>I'm the course index page</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Course Name</th>
+			<th>Start date</th>
+		</tr>
+	</thead>
+
+<tbody>
+	<% @courses.each do |course| %>
+		<tr>
+			<td><%= link_to course.name, course_path(course) %></td>
+			<td><%= course.start_date %></td>
+		</tr>
+	<% end %>
+</tbody>
+	
+</table>

@@ -1,9 +1,9 @@
 @import "bootstrap";
 
-// MIXINS START
-
+// --- MIXINS START --- //
 $green-highlights: #00CB79;
 $border-color: 3px solid #00CB79;
+$box-shadow: 0 0 11px rgba(0, 0, 0, 0.4);
 
 @mixin centering {
   display: flex;
@@ -16,24 +16,33 @@ $border-color: 3px solid #00CB79;
 @mixin date {
 	box-sizing: border-box;
 	float: left;
+	width: 100%;
 	height: 40px;
-	width: 200px !important;
 	padding: 0px 15px;
 	background: transparent;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0 !important;
 	border-radius: 0;
 	border: 1px solid #999999 !important;
+	outline: none;
+	background: image_url('dropdown-icon.svg') 96% / 15% no-repeat;
+	background-size: 14px 8.5px;
 	@content;
 }
 
-// MIXINS END
+@mixin cards {
+	position: relative;
+	width: 660px;
+	box-shadow: $box-shadow;
+	margin-right: auto;
+	margin-left: auto;
+	@content;
+}
+// --- MIXINS END --- //
 
-// GLOBAL STYLES START
-
+// --- GLOBAL STYLES START --- //
 html,
 body {
-	width: 100%;
 	height: 100%;
 	margin:0;
 	padding:0;
@@ -44,11 +53,9 @@ body {
 *:after {
   box-sizing: border-box;
 }
+// --- GLOBAL STYLES END --- //
 
-// GLOBAL STYLES END
-
-// HEADER STYLES START
-
+// --- HEADER STYLES START --- //
 #app-wrapper {
 	margin-right: 15%;
 	margin-left: 15%;
@@ -66,6 +73,7 @@ body {
 }
 
 #nav-bar {
+	width: 100%;
 	margin-top: 30px;
 }
 
@@ -81,9 +89,13 @@ body {
 	text-align: center;
 }
 
+.nav-item p {
+	font-size: 14px;
+}
+
 .status-icons {
 	width: 40px;
-	padding-top: 8px;
+	padding-top: 9px;
 	padding-bottom: 8px;
 	height: 40px !important;
 	max-height: 40px;
@@ -116,16 +128,174 @@ body {
 .active-text {
 	color: $green-highlights;
 }
+// --- HEADER STYLES END --- //
 
-// HEADER STYLES END
+// --- FORM STYLES START --- //
+// COURSE MODAL CARD START
+#course-card {
+	@include cards {
+		height: 475px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
 
-// FORM STYLES START
+.change-course {
+	width: 100%;
+	padding-top: 19px;
+	padding-bottom: 19px;
+	margin-bottom: 20px;
+	color: #999999;
+	font-size: 14px;
+}
 
-#new-form-card {
-	width: 660px;
-	box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+.float-right {
+	padding-right: 28px;
+}
+
+.trigger {
+	color: #45B0E5;
+	&:hover {
+		color: #0f97db;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+.course-icon {
+	height: 96px;
+	width: 96px;
 	margin-right: auto;
 	margin-left: auto;
+	background: image_url('python.svg') no-repeat;
+	background-size: 96px 96px;
+}
+
+.course-text {
+	width: 100%;
+	margin-top: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.course-text h2 {
+	font-size: 34px;
+	color: $green-highlights;
+}
+
+.course-text p {
+	font-size: 18px;
+	color: #1A1A1A;
+}
+
+.course-text span {
+	font-size: 14px;
+	font-weight: 300;
+	color: #999999;
+}
+
+.course-info {
+	position: absolute;
+	width: 100%;
+	bottom: 45px;
+	text-align: center;
+}
+
+.course-info p {
+	font-size: 14px;
+	color: $green-highlights;
+	margin-bottom: 7px;
+}
+
+.course-info span {
+	font-size: 16px;
+	color: #808080;
+}
+
+.a-cool-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.for-modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal-card {
+	width: 700px;
+	height: 530px;
+	background-color: white;
+}
+
+.modal-card h1 {
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: black;
+	font-weight: 300;
+	font-size: 20px;
+	color: white;
+	padding-left: 50px;
+	margin-bottom: 0;
+}
+
+.content-for-modal {
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+.content-for-modal p {
+	margin-bottom: 5px;
+}
+
+.track-icon-box {
+	height: 175px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.track-icon {
+	height: 175px;
+	width: 155px;
+	margin: 0px 2px 0px 2px;
+}
+
+.class-select-fields {
+	
+}
+
+.modal-btn-box {
+	@include centering {
+		margin-top: 63px;
+	}
+}
+
+.close-n-save {
+	width: 230px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: $green-highlights;
+	text-align: center;
+	color: white;
+	&:hover {
+		background-color: #00b86e;
+		cursor: pointer;
+	}
+}
+// COURSE MODAL CARDS END //
+
+#new-form-card {
+	@include cards
 }
 
 .form-header {
@@ -156,20 +326,35 @@ body {
 	font-weight: 300;
 }
 
-.new-student-form-fields input[type=text], input[type=number] {
+.new-student-form-fields input[type=text] {
 	width: 100%;
 	padding: 8px 15px;
 	border: 1px solid #999999;
 	box-sizing: border-box;
+	&:focus {
+		border: 2px solid $green-highlights;
+		outline: none;
+	}
 }
 
-.new-student-form-fields input[type=text]:focus, input[type=number]:focus {
-	border: 2px solid $green-highlights;
-	outline: none;
+#contact-info {
+	margin-bottom: 65px;
+}
+
+#location {
+	margin-bottom: 65px;
 }
 
 #date-field-box {
 	margin-bottom: 65px;
+}
+
+#select-fields select {
+	@include date
+}
+
+#select-fields select:focus {
+	border: 2px solid $green-highlights !important;
 }
 
 .date-fields select {
@@ -179,19 +364,17 @@ body {
 }
 
 select#student_dob_2i {
-	@include date {
-		margin-right: 10px;
-	}
+	margin-right: 10px;
+	width: 200px !important;
 }
 
 select#student_dob_3i {
-	@include date {
-		margin-right: 10px;
-	}
+	margin-right: 10px;
+	width: 200px !important;
 }
 
 select#student_dob_1i {
-	@include date
+	width: 200px !important;
 }
 
 .btn-box {
@@ -213,11 +396,9 @@ select#student_dob_1i {
 	color: white;
 	text-align: center;
 }
+// --- FORM STYLES END --- //
 
-// FORM STYLES END
-
-// SHOW STYLES START
-
+// --- SHOW STYLES START --- //
 .scrolling-wrapper {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -231,8 +412,7 @@ select#student_dob_1i {
     text-align: 12px;
   }
 }
-
-// SHOW STYLES END
+// --- SHOW STYLES END --- //
 
 .grid-container {
   display: grid;

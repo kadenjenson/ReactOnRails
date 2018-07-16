@@ -11,13 +11,13 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :state
       t.string :zip
       t.date :dob
-      t.integer :course
-      t.integer :military_status
-      t.integer :education
-      t.integer :experience
-      t.integer :employment_status
-      t.integer :salary
-      t.integer :gender
+      t.string :military_status
+      t.string :education
+      t.string :experience
+      t.string :employment_status
+      t.string :salary
+      t.string :gender
+      t.string :format_type
 
       t.timestamps
     end

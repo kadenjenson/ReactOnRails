@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625180143) do
+ActiveRecord::Schema.define(version: 20180716152401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "starts", force: :cascade do |t|
+    t.date "start_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "course_id"
+    t.index ["course_id"], name: "index_starts_on_course_id"
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "f_name"
@@ -26,15 +40,22 @@ ActiveRecord::Schema.define(version: 20180625180143) do
     t.string "state"
     t.string "zip"
     t.date "dob"
-    t.integer "course"
-    t.integer "military_status"
-    t.integer "education"
-    t.integer "experience"
-    t.integer "employment_status"
-    t.integer "salary"
-    t.integer "gender"
+    t.string "military_status"
+    t.string "education"
+    t.string "experience"
+    t.string "employment_status"
+    t.string "salary"
+    t.string "gender"
+    t.string "format_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "course_id"
+    t.bigint "start_id"
+    t.index ["course_id"], name: "index_students_on_course_id"
+    t.index ["start_id"], name: "index_students_on_start_id"
   end
 
+  add_foreign_key "starts", "courses"
+  add_foreign_key "students", "courses"
+  add_foreign_key "students", "starts"
 end

@@ -1,25 +1,17 @@
-# README
+# Enrollment App for Bottega
+# .
+** psst! Hey collabs, help add to this list of stuff we need to get done! **
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## TO-DO
 
-Things you may want to cover:
+1. Authentication and Authorization for admins only. (App does not need reg users)
+1. api's for Tuition Teller, Boon, DevCamp, etc.
+1. Ability to print/download files for contracts
+1. Basic styling
 
-* Ruby version
+## DONE
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ReactOnRails
+~~Hook React up to Rails~~  
+~~Create GitHub Repo~~  
+~~Basic crud~~  
+~~State prop dynamic behavior~~  
