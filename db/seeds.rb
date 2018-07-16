@@ -1,4 +1,3 @@
-
 Course.create!(name: "Class 1")
 Course.create!(name: "Class 2")
 Course.create!(name: "Class 3")
@@ -8,6 +7,8 @@ puts "created 3 courses"
 Start.create!(start_date: (Date.today + 30.days), course_id: Course.first.id)
 Start.create!(start_date: (Date.today + 60.days), course_id: Course.second.id)
 Start.create!(start_date: (Date.today + 90.days), course_id: Course.third.id)
+
+puts "3 Start Dates created"
 
 
 10.times do |student|
