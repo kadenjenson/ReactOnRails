@@ -12,7 +12,6 @@
 	<% @courses.each do |course| %>
 		<tr>
 			<td><%= link_to course.name, course_path(course) %></td>
-			<td><%= course.start_date %></td>
 		</tr>
 	<% end %>
 </tbody>

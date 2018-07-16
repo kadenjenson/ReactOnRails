@@ -10,7 +10,6 @@ Start.create!(start_date: (Date.today + 90.days), course_id: Course.third.id)
 
 puts "3 Start Dates created"
 
-
 10.times do |student|
 	Student.create!(
 		f_name: "Kaden",
