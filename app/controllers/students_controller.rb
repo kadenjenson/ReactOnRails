@@ -73,6 +73,7 @@ class StudentsController < ApplicationController
                                       :salary, 
                                       :gender,
                                       :format_type,
+                                      :course_select,
                                       :course_id)
     end
 end
