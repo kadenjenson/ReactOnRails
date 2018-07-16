@@ -1,4 +1,4 @@
 class Course < ApplicationRecord
-	has_many :students
-	has_many :start_dates
+	has_many :students, through: :starts
+	has_many :start
 end
