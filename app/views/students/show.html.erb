@@ -1,10 +1,17 @@
+<p id="notice"><%= notice %></p>
 <div class="container">
   <div class="scrolling-wrapper">
     <div class="card">
+      <header>
+        <div class="form-header"><p>Terms Of Admission_</p></div>
+        <a href="#" onclick="window.print();return false;">print me</a>
+      </header>
+     <div class="cardtext">
         <br>
         <br>
         <br>
-        <center><b>Enrollment Application and Agreement</b></center>
+        <center><b>Enrollment Application and Agreement</b></center>      <onclick="window.print();return false;" />
+
         <br>
         <br>
         
@@ -41,386 +48,314 @@
       The institution is not accredited by a regional or national accrediting agency recognized by the United States Department of Education. 
 
       Accreditation is designed to help educational institutions boost their ongoing performance efforts for the benefit of their students. Accreditation matters because our students deserve the highest level of educational excellence possible.</p>
-<center><p>
-<h4>STUDENT INFORMATION</h4></p></center>
-<aside><p>
-STUDENT NAME:   _<%= @student.f_name %> <%= @student.l_name %>__
-<br>
-ADDRESS:  _<%= @student.address_one %> <%= @student.address_two %>_
-<br>
-CITY:   _<%= @student.city %>_STATE: _<%= @student.state %>_ ZIP: _<%= @student.zip %>_
-<br>
-HOME PHONE:   _<%= @student.phone %>_ CELL PHONE: _<%= @student.phone %>_
-<br>
-DATE OF BIRTH:  _<%= @student.dob %>_ 
-<aside>E-MAIL: _<%= @student.email %>_</aside>
-<br>
-EMERGENCY CONTACT:  _____________________________________________________
-<br>
-RELATIONSHIP: _____________________ <aside>PHONE: _________________________</aside>
+      <center><p>
+      <h4>STUDENT INFORMATION</h4></p></center>
+      <aside><p>
+      <b>STUDENT NAME:</b>   _<%= @student.f_name %> <%= @student.l_name %>__
+      <br>
+      <b>ADDRESS:</b>  _<%= @student.address_one %> <%= @student.address_two %>_
+      <br>
+      <b>CITY:</b>   _<%= @student.city %>_<b>STATE:</b> _<%= @student.state %>_ <b>ZIP:</b> _<%= @student.zip %>_
+      <br>
+      <b>HOME PHONE:</b>   _<%= @student.phone %>_ <b>CELL PHONE:</b> _<%= @student.phone %>_
+      <br>
+      <b>DATE OF BIRTH:</b>  _<%= @student.dob %>_ 
+      <aside><b>E-MAIL:</b> _<%= @student.email %>_</aside>
+      <br>
+      <b>EMERGENCY CONTACT:</b>  ____________________________________
+      <br>
+      <b>RELATIONSHIP:</b> _____________________ <aside><b>PHONE:</b> _________________________</aside>
 
-</p></aside>
-<br>
+      </p></aside>
+      <br>
 
-<center>
-<p><h4>ENGAGEMENT MODEL OFFERED</h4>
-I am choosing the following engagement model:</p></center>
-<br>
-<table>
-  <colgroup>
-    <col span="2" style="background-color:white">
-    <col style="background-color:white">
-  </colgroup>
-  <tr>
-    <th></th>
-    <th>FT In Person</th>
-    <th>FT Online</th>
-    <th>Self Paced</th>
-  </tr>
-  <tr>
-    <td>Days/Hours</td>
-    <td>9-5 M-F</td>
-    <td>9-5 M-F</td>
-    <td>600 hours Total</td>
-  </tr>
-  <tr>
-    <td>Weeks</td>
-    <td>12</td>
-    <td>12</td>
-    <td>20 to 40</td>
-  </tr>
-  <tr>
-    <td>Total Study</td>
-    <td>600 hours</td>
-    <td>600 hours</td>
-    <td>600 hours</td>
-  </tr>
-  <tr>
-    <td>Tuition</td>
-    <td>$12,000 US</td>
-    <td>$12,000 US</td>
-    <td>$7,500 US</td>
-  </tr>
-  <tr>
-    <td>MacBook Pro</td>
-    <td>OK</td>
-    <td>OK</td>
-    <td>OK</td>
-  </tr>
-  <tr>
-    <td>Windows PC</td>
-    <td>OK</td>
-    <td>OK</td>
-    <td>OK</td>
-  </tr>
-</table>
-<br>
-<table>
-  <colgroup>
-    <col span="2" style="background-color:white">
-    <col style="background-color:white">
-  </colgroup>
-  <tr>
-    <td>Hi-Speed Internet</td>
-    <td>Provided</td>
-    <td>Required</td>
-    <td>Recommended</td>
-  </tr>
-  <tr>
-    <td>Certificate</td>
-    <td>Full Stack Web Development</td>
-    <td>Full Stack Web Development</td>
-    <td>Full Stack Web Development</td>
-  </tr>
-  <tr>
-    <td>Attendance Required</td>
-    <td>90% Rec. 80% minimum</td>
-    <td>90% Rec. 80% minimum</td>
-    <td>90% of scheduled Mentor meetings</td>
-  </tr>
-  <tr>
-    <td>Job Placement Assistance</td>
-    <td>yes</td>
-    <td>yes</td>
-    <td>yes</td>
-  </tr>
-</table>
-<br>
-<br>
-<ol>
-  <li>Time zone will vary. If you plan to be a full-time remote student be aware that all classes are in Mountain Time Zone.</li>
-  <li>Completion time depends on how much you study each week. Each major certification track takes about 600 hours to finish.</li>
-  <li>Reschedule or cancel your weekly mentor meeting if you can’t make it.</li>
-</ol>
+      <center>
+      <p><h4>ENGAGEMENT MODEL OFFERED</h4>
+      I am choosing the following engagement model:</p></center>
+      <br>
+      <div class="grid-container">
+        <div></div>
+        <div>FT In Person</div>
+        <div>FT Online</div>  
+        <div>Self Paced</div>
+        <div>Days/Hours</div>
+        <div>9-5 M-F</div>
+        <div>9-5 M-F</div>
+        <div>600 hours Total</div>
+        <div>Weeks</div>
+        <div>12</div>
+        <div>12</div>  
+        <div>20 to 40</div>
+        <div>Total Study</div>
+        <div>600 Hours</div>
+        <div>600 hours</div>
+        <div>600 Hours</div>
+        <div>Tuition</div>
+        <div>$12,000 US</div>
+        <div>$12,000 US</div>  
+        <div>$7,500 US</div>
+        <div>MacBook Pro</div>
+        <div>OK</div>
+        <div>OK</div>
+        <div>OK</div>
+        <div>Windows PC</div>
+        <div>OK</div>
+        <div>OK</div>  
+        <div>OK</div>
+        <div>HI Speed Internet</div>
+        <div>Provided</div>
+        <div>Required</div>
+        <div>Recommended</div>
+        <div>Certificate</div>
+        <div>FULL STACK DEVELOPMENT</div>
+        <div>FULL STACK DEVELOPMENT</div>  
+        <div>FULL STACK DEVELOPMENT</div>
+        <div>Attendance Required</div>
+        <div>90% recommended 80% minimum</div>
+        <div>90% recommended 80% minimum</div>
+        <div>90% of scheduled mentor sessions</div>
+        <div>Job Placement Assistance</div>
+        <div>yes</div>
+        <div>yes</div>  
+        <div>yes</div>
+      </div>
+      <br>
+      <br>
+      <ol>
+        <li>Time zone will vary. If you plan to be a full-time remote student be aware that all classes are in Mountain Time Zone.</li>
+        <li>Completion time depends on how much you study each week. Each major certification track takes about 600 hours to finish.</li>
+        <li>Reschedule or cancel your weekly mentor meeting if you can’t make it.</li>
+      </ol>
 
-<center>
-<p><h5>Enrollment Track Options:</h5></p></center>
-<b>Indicate which track you are enrolling in at this time.</b>
+      <center>
+      <p><h5>Enrollment Track Options:</h5></p></center>
+      <b>Indicate which track you are enrolling in at this time.</b>
 
-<p>PLANNED PROGRAM START DATE: _________________________ 
-<em>This should be the next Monday after registration, or an agreed start date no more than 1 month into the future. If you choose a delayed start date you won’t have access to the curriculum and learning systems until that date.</em></p>
-<br>
-<center><p>*************************** PART-TIME ***************************</p></center>
-<p><b>[  ] Full Stack Web Development - Python/React/JS • Self-Paced. Tuition $7,500 US.</b>
-The Python/React/JS curriculum. You will learn the foundation level of the main programming languages and complete some early projects. Estimated at 600 hours (20-40 weeks Part-Time) Course Code FSWD-P. <em>Prerequisite: None.</em></p>
+      <p>PLANNED PROGRAM START DATE: _________________________ 
+      <em>This should be the next Monday after registration, or an agreed start date no more than 1 month into the future. If you choose a delayed start date you won’t have access to the curriculum and learning systems until that date.</em></p>
+      <br>
+      <center><p>*************************** PART-TIME ***************************</p></center>
+      <p><b>[  ] Full Stack Web Development - Python/React/JS • Self-Paced. Tuition $7,500 US.</b>
+      The Python/React/JS curriculum. You will learn the foundation level of the main programming languages and complete some early projects. Estimated at 600 hours (20-40 weeks Part-Time) Course Code FSWD-P. <em>Prerequisite: None.</em></p>
 
-<center><p>*************************** FULL-TIME ***************************</p></center>
-<p><b>[  ] Full Stack Web Development - Python/React/JS • Full-Time. Tuition $12,000 US.</b>
-The full curriculum. You will learn the foundation level of the main programming languages and complete some early projects. Estimated at 600 hours (12 weeks Full-Time) Course Code FSWD-R. Prerequisite: None.</p>
+      <center><p>*************************** FULL-TIME ***************************</p></center>
+      <p><b>[  ] Full Stack Web Development - Python/React/JS • Full-Time. Tuition $12,000 US.</b>
+      The full curriculum. You will learn the foundation level of the main programming languages and complete some early projects. Estimated at 600 hours (12 weeks Full-Time) Course Code FSWD-R. Prerequisite: None.</p>
 
-*********************************************************************
-<br>
-<br>
-<br>
-<br>
-<p>EXPECTED COURSE END DATE: _________________________</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>EXPECTED COURSE END DATE: _________________________</p>
 
 
-<p>This engagement model includes online support. Our response times will vary based on time & day when support is requested. Bottega reserves the right to adjust service times as needed as well as determine if individual users are abusing the support mechanism to avoid making the effort to learn on their own.</p>
-<b><p>COURSE STUDENT IS ENROLLING IN</b></p>
-<p>COURSE STUDENT IS ENROLLING in:_<%= @student.course %>_</p>
-<p>ENGAGEMENT MODEL: _________________________</p>
-<br>
-<br>
+      <p>This engagement model includes online support. Our response times will vary based on time & day when support is requested. Bottega reserves the right to adjust service times as needed as well as determine if individual users are abusing the support mechanism to avoid making the effort to learn on their own.</p>
+      <b><p>COURSE STUDENT IS ENROLLING IN</b></p>
+      <p>COURSE STUDENT IS ENROLLING in:_<%= @student.course %>_</p>
+      <p>ENGAGEMENT MODEL: _________________________</p>
+      <br>
+      <br>
 
-<strong>TIMEFRAME TO COMPLETE THE COURSE</strong>
-<aside>In order to receive a course grade and have your transcript reflect full credit for a class, all course requirements must be completed within a certain timeframe.</aside> 
+      <strong>TIMEFRAME TO COMPLETE THE COURSE</strong>
+      <aside>In order to receive a course grade and have your transcript reflect full credit for a class, all course requirements must be completed within a certain timeframe.</aside> 
 
-<b>FAQ</b>
-<aside>Q. What if I fail to finish on time?</aside>
-<aside>A. You will still have access to the material after the normal timeline, but might not receive academic credit (if available to you) for the course.</aside> 
-<br>
-<aside>Q. Can I still get academic course credit later?</aside>
-<aside>A. You may later pay a certification fee and have your learning individually assessed to receive credit, or retake the course at a later time. Acceptance of this by other institutions can not be guaranteed, as some academic institutions have strict attendance requirements. If you want to be eligible for potential academic transfer we strongly recommend you plan to finish courses on time.</aside> 
-<br>
-<aside>Q. What if I anticipate needing a bit of time off during the course?</aside>
-<aside>A. Some “slack” has already been built into every course schedule to allow a reasonable amount of time for vacations, illness, and surprises, so the pace is not too difficult. This slack is estimated at about 20% of the schedule for part-time courses and only 10% for full-time courses. Do not plan to take time off during a full-time immersive course.</aside>
-<br>
-<aside>Q. How do I transfer my credits to a college?</aside>
-<aside>A. When ready you may request your ACE credit recommendations transcript. More than 1,500 colleges and universities are members of ACE. Present your transcript to your desired transfer school(s). Be advised that admissions policies vary from one college to another and the receiving institution has discretion regarding how much credit they allow to transfer in.</aside>
-<br>
-<br>
-
-
-<b>COURSE INFORMATION</b>
-<b>Full Stack Web Development - Python/React/JS</b>
-<aside>Total Estimated Hours: 600</aside>
-<aside>Certification: Full Stack Web Developer</aside>
-<aside>Certificate Type: Certificate of Proficiency (Graded) or Certificate of Completion (Pass/Fail)</aside>
-<br>
-<p>The Full Stack Web Development course is an immersive approach to both front and back end development through HTML, CSS, JavaScript, Python, Django. Students are trained in understanding, manipulating, creating and querying databases and APIs, client-side development including responsive web design and dynamic interfaces, and basic Agile/SCRUM Project Management. Students are also trained and coached in best practices for finding employment in the tech industry including resume work, networking, technical interviewing and more. Completion of this course will require a high quality of work throughout the course, and completion of all projects.</p> 
-
-<p>Grading Policies for Bottega courses may be taken as Pass/Fail, or for a Grade. Check with your enrollment advisor or posted course information about your chosen enrollment track to be sure which you are attempting.</p>
-
-<aside>This education track consists of the following courses:</aside>
-<aside>Academic Content/Course List</aside>
-<ul>
-  <li>CS277 Intro to Programming in Python</li>
-  <li>CS301 Front End Foundations - JS </li>
-  <li>CS382 Modern Databases & Theory</li>
-  <li>CS384 Advanced Programming in Python</li>
-  <li>CS497 Advanced Web Development - React</li>
-  <li>Career Placement, Interview Coaching, and Resume Writing</li>
-</ul>
-
-<br>
-<br>
-
-<b>TUITION OPTIONS</b>
-<aside>Payment Options</aside>
-<aside>You are encouraged to consult a financial advisor or secure your own financing to discover the best possible interest rate you might qualify for based on your individual credit. For questions, please contact our office at 801.980.3664.</aside>
-<br>
-<p>Bottega accepts checks, credit cards, debit cards and 3rd party financing by arrangement with SkillsFund, MACU, and possibly other partners from time-to-time. </p>
+      <b>FAQ</b>
+      <aside>Q. What if I fail to finish on time?</aside>
+      <aside>A. You will still have access to the material after the normal timeline, but might not receive academic credit (if available to you) for the course.</aside> 
+      <br>
+      <aside>Q. Can I still get academic course credit later?</aside>
+      <aside>A. You may later pay a certification fee and have your learning individually assessed to receive credit, or retake the course at a later time. Acceptance of this by other institutions can not be guaranteed, as some academic institutions have strict attendance requirements. If you want to be eligible for potential academic transfer we strongly recommend you plan to finish courses on time.</aside> 
+      <br>
+      <aside>Q. What if I anticipate needing a bit of time off during the course?</aside>
+      <aside>A. Some “slack” has already been built into every course schedule to allow a reasonable amount of time for vacations, illness, and surprises, so the pace is not too difficult. This slack is estimated at about 20% of the schedule for part-time courses and only 10% for full-time courses. Do not plan to take time off during a full-time immersive course.</aside>
+      <br>
+      <aside>Q. How do I transfer my credits to a college?</aside>
+      <aside>A. When ready you may request your ACE credit recommendations transcript. More than 1,500 colleges and universities are members of ACE. Present your transcript to your desired transfer school(s). Be advised that admissions policies vary from one college to another and the receiving institution has discretion regarding how much credit they allow to transfer in.</aside>
+      <br>
+      <br>
 
 
-<b>STATEMENT OF TUITION</b>
-<aside>TUITION:  $ ______________________</aside>
-<aside>DOWN PAYMENT: $ ______________________</aside>
-<aside>SCHOLARSHIP:  $ ______________________</aside>
- 
-_____________________________________________________
+      <b>COURSE INFORMATION</b>
+      <b>Full Stack Web Development - Python/React/JS</b>
+      <aside>Total Estimated Hours: 600</aside>
+      <aside>Certification: Full Stack Web Developer</aside>
+      <aside>Certificate Type: Certificate of Proficiency (Graded) or Certificate of Completion (Pass/Fail)</aside>
+      <br>
+      <p>The Full Stack Web Development course is an immersive approach to both front and back end development through HTML, CSS, JavaScript, Python, Django. Students are trained in understanding, manipulating, creating and querying databases and APIs, client-side development including responsive web design and dynamic interfaces, and basic Agile/SCRUM Project Management. Students are also trained and coached in best practices for finding employment in the tech industry including resume work, networking, technical interviewing and more. Completion of this course will require a high quality of work throughout the course, and completion of all projects.</p> 
 
-<aside>TOTAL DUE:  $ ______________________</aside>
+      <p>Grading Policies for Bottega courses may be taken as Pass/Fail, or for a Grade. Check with your enrollment advisor or posted course information about your chosen enrollment track to be sure which you are attempting.</p>
 
-<b>STATEMENT OF INTENT TO FINANCE</b>
-<aside>[  ]   I will pay the full tuition within 30 days.</aside>
-<aside>[  ]   I plan to finance a Part-Time education program. </aside>
-<aside>[  ]   I plan to finance a Full-Time education program.</aside>
-<b>INSTITUTIONAL POLICIES, TERMINATION RIGHTS AND REFUND POLICY</b>
-<br>
-<b>Education Requirements</b>
-<p>We reserve the right to refuse students admittance if we believe the student lacks the foundation they need to succeed in the program. <b>Student admission and enrollment requires at minimum the possession of a high school diploma, General Education Development (GED) Certificate, and being beyond the age of compulsory high school attendance, as prescribed by Utah law. No prior credit is transferable to Bottega.</b></p> 
+      <aside>This education track consists of the following courses:</aside>
+      <aside>Academic Content/Course List</aside>
+      <ul>
+        <li>CS277 Intro to Programming in Python</li>
+        <li>CS301 Front End Foundations - JS </li>
+        <li>CS382 Modern Databases & Theory</li>
+        <li>CS384 Advanced Programming in Python</li>
+        <li>CS497 Advanced Web Development - React</li>
+        <li>Career Placement, Interview Coaching, and Resume Writing</li>
+      </ul>
 
-<aside><b>Eligibility Declaration</b></aside>
-<p>[  ] I declare that I have a high school diploma or a GED certificate or know myself to be otherwise competent to learn & engage in this education program. I release Bottega and it’s partners from any liability associated with admitting me into this program on the basis of competence.
-Language - Our current face to face and online teaching platforms are written and taught in the English language. Additional languages may be added at a later date.</p>
+      <br>
+      <br>
 
-<aside><b>Attendance and Grading System</b></aside>
-<u>
-  <li>Completion of a full-time course will require at least 95% attendance, a high quality of work throughout the course, completion of all projects and a grade of >70%</li>
-  <li>Graduates of a program will receive a Certificate of Proficiency or a Certificate of Completion in the chosen area of focus.</li>
-</u>
+      <b>TUITION OPTIONS</b>
+      <aside>Payment Options</aside>
+      <aside>You are encouraged to consult a financial advisor or secure your own financing to discover the best possible interest rate you might qualify for based on your individual credit. For questions, please contact our office at 801.980.3664.</aside>
+      <br>
+      <p>Bottega accepts checks, credit cards, debit cards and 3rd party financing by arrangement with SkillsFund, MACU, and possibly other partners from time-to-time. </p>
 
-<br>
 
-<aside><b>Leave of Absence Policy</b></aside>
-<p>Students who are unable to continue classes for medical reasons or severe personal problems will be required to take a leave of absence until they are able to return to class.  Due to the immersive nature of the full-time course, if student absence or tardiness exceeds 20%, they may be dismissed or required to participate in a future class, at Bottega’s sole discretion.</p>
+      <b>STATEMENT OF TUITION</b>
+      <aside>TUITION:  $ ______________________</aside>
+      <aside>DOWN PAYMENT: $ ______________________</aside>
+      <aside>SCHOLARSHIP:  $ ______________________</aside>
+      <aside>TOTAL DUE:  $ ______________________</aside>
+      <br>
+      <br>
+      <b>STATEMENT OF INTENT TO FINANCE</b>
+      <aside><form>
+        <input type="checkbox"><label>I will pay the full tuition within 30 days</label>
+      </form></aside>
+      <aside><form>
+        <input type="checkbox"><label>I plan to finance a Part-Time education program</label>
+      </form></aside>
+      <aside><form>
+        <input type="checkbox"><label>I plan to finance a Full-Time education program.</label>
+      </form></aside>
+      <br>
+      <br>
+      <b>INSTITUTIONAL POLICIES, TERMINATION RIGHTS AND REFUND POLICY</b>
+      <br>
+      <b>Education Requirements</b>
+      <p>We reserve the right to refuse students admittance if we believe the student lacks the foundation they need to succeed in the program. <b>Student admission and enrollment requires at minimum the possession of a high school diploma, General Education Development (GED) Certificate, and being beyond the age of compulsory high school attendance, as prescribed by Utah law. No prior credit is transferable to Bottega.</b></p> 
 
-<aside><b>Satisfactory Academic Progress Policy</b></aside>
-<p>Students academic progress will be measured on a periodic basis. If student is determined to be failing a full-time class then they will be placed on probation for 2 weeks. If the student is still failing at the end of the probation period, then the student will be dismissed from the program.  An overall attendance rate of at least 95% is recommended. If you are ill you can attend live from home by making use of the remote attendance tools. You will be potentially dismissed from the program if absences or tardiness exceed 20%, pending appeal process.</p>
-<br>
+      <b>Eligibility Declaration</b>
+      <aside><form>
+        <input type="checkbox"><label>I declare that I have a high school diploma or a GED certificate or know myself to be otherwise competent to learn & engage in this education program. I release Bottega and it’s partners from any liability associated with admitting me into this program on the basis of competence.
+        Language - Our current face to face and online teaching platforms are written and taught in the English language. Additional languages may be added at a later date.</label>
+      </form></aside> 
 
-<aside><b>Placement Assistance</b></aside>
-<p>Bottega offers employment assistance to graduates, consisting of job lead referrals and job skills development. While assisting in your job search, we make no guarantee, expressed or implied, of future employment.</p> 
-<br>
-<em>Employment guarantees are prohibited by law in most U.S. States.</em>
-<br>
-<aside><b>Student Conduct</b></aside>
-<p>Improper conduct is defined as interfering with the teaching and learning occurring on the web site in any way, such as by posting profane, demeaning, threatening or inappropriate language, violating copyrights, impersonating others, revealing personal information, disrupting the school network or importation of sexually explicit, drug related or other offensive materials into the course environment. Plagiarism, or the act of presenting other people’s ideas/writings without giving credit to these sources, is academically dishonest and can carry severe consequences, up to removal from class.</p>
-<br>
-<aside><b>Refund Policy</b></aside>
-<aside>You are not entitled to any refund from Bottega except as set forth below.</aside>
-<ul>
-  <li>A three-business day cooling-off period, commencing with the day an enrollment agreement with the applicant is signed or an initial deposit or payment toward tuition and fees of the institution is made, until midnight of the third business day following such date, or from the date that the student first visits the institution, whichever is later, during which time the contract may be rescinded and all monies paid refunded. Evidence of personal appearance at the institution or a deposit of a written statement of withdrawal for delivery by mail or other means shall be deemed as meeting the terms of the cooling off period. </li>
-  <li>Cancellation: An applicant who provides written notice of cancellation at least one week (7 calendar days) prior to the first day of class is entitled to a refund of all monies paid, less the non-refundable deposit, provided that you first return all program materials and supplies as set forth in subsection (c) below. Students who cancel after this date are not entitled to a refund.</li>
-  <li>A student enrolled in a correspondence institution may withdraw from enrollment following the cooling-off period, prior to submission by the student of any lesson materials or prior to receipt of course materials, whichever comes first, and effective upon deposit of a written statement of withdrawal for delivery by mail or other means, and the institution shall be entitled to retain no more than $250 in tuition or fees as registration charges or an alternative amount that the institution can demonstrate to have been expended in preparation for that particular student’s enrollment.</li>
-  <li>Early Termination: A student terminated by Bottega for misconduct is only entitled to a prorated refund for the future portion of their program as of the notice of termination.</li>
-  <li>Materials: Before receiving any refunds, you must first return any and all program materials and supplies received from Bottega. If not hand delivered, materials must be sent to Bottega at your expense, insured and tracked through the carrier. After returning any program materials to Bottega, you must also destroy all copies of program materials you may have, including all downloaded copies, backup copies, printed or written copies, and derivative works of any kind.</li>
-</ul>
+      <aside><b>Attendance and Grading System</b></aside>
+      <u>
+        <li>Completion of a full-time course will require at least 95% attendance, a high quality of work throughout the course, completion of all projects and a grade of >70%</li>
+        <li>Graduates of a program will receive a Certificate of Proficiency or a Certificate of Completion in the chosen area of focus.</li>
+      </u>
 
-<aside><b>NOTICE TO BUYER:</b></aside>
-<ul>
- <li>Do not sign this agreement before you have read it or if it contains any blank spaces.
- <li>This agreement is a legally binding instrument. Both sides of the contract are binding only when the agreement is accepted, signed, and dated by an authorized official of Bottega or the admissions officer at Bottega’s principal place of business.</li>
- <li>You are entitled to an exact copy of this agreement and any disclosure pages you sign.</li>
- <li>Bottega reserves the right to terminate a student's training for unsatisfactory progress, non-payment of tuition or failure to abide established standards of conduct.</li>
- <li>Bottega has articulation agreements with selected universities. Please consult the most recent list of university partners for details. Bottega does not otherwise guarantee the transferability of credits to a college, university or institution. Any decision on the comparability, appropriateness and applicability of credit and whether they should be accepted is the decision of the receiving institution.</li>
- <li>Under no circumstances shall Bottega be liable for any damages, including direct, incidental, special, consequential or punitive damages that result from this agreement, or your enrollment in its programs or from other Bottega services, even if Bottega has been advised of the possibility of such damages. In no event shall Bottega’s total liability to you for all damages, losses, and causes of action, whether in contract, tort or otherwise, exceed the amounts paid by you to Bottega.</li>
- <li>This Agreement shall be governed by the laws of the State of Utah. The parties agree that venue shall be in Utah courts for any disputes arising between the parties and both parties agree to the personal jurisdiction and venue of such courts and waive any right to assert otherwise. In any action between the parties, which arises out of or relates to this Agreement, the prevailing party, in addition to all other rights or remedies, shall be entitled to an award of its costs incurred in connection with the action, including reasonable attorney's fees and costs.</li>
- <li>This Agreement may not be modified or amended except in writing signed by the parties hereto and specifically referring to this Agreement. If any provision of this Agreement is found to be void or unenforceable, such provision shall be modified to the minimum extent necessary to make it valid and enforceable; or, if it cannot be so modified, it shall be severed and the other provisions of this Agreement shall remain in full force and effect.</li>
-</ul>
+      <br>
+
+      <aside><b>Leave of Absence Policy</b></aside>
+      <p>Students who are unable to continue classes for medical reasons or severe personal problems will be required to take a leave of absence until they are able to return to class.  Due to the immersive nature of the full-time course, if student absence or tardiness exceeds 20%, they may be dismissed or required to participate in a future class, at Bottega’s sole discretion.</p>
+
+      <aside><b>Satisfactory Academic Progress Policy</b></aside>
+      <p>Students academic progress will be measured on a periodic basis. If student is determined to be failing a full-time class then they will be placed on probation for 2 weeks. If the student is still failing at the end of the probation period, then the student will be dismissed from the program.  An overall attendance rate of at least 95% is recommended. If you are ill you can attend live from home by making use of the remote attendance tools. You will be potentially dismissed from the program if absences or tardiness exceed 20%, pending appeal process.</p>
+      <br>
+
+      <aside><b>Placement Assistance</b></aside>
+      <p>Bottega offers employment assistance to graduates, consisting of job lead referrals and job skills development. While assisting in your job search, we make no guarantee, expressed or implied, of future employment.</p> 
+      <br>
+      <em>Employment guarantees are prohibited by law in most U.S. States.</em>
+      <br>
+      <aside><b>Student Conduct</b></aside>
+      <p>Improper conduct is defined as interfering with the teaching and learning occurring on the web site in any way, such as by posting profane, demeaning, threatening or inappropriate language, violating copyrights, impersonating others, revealing personal information, disrupting the school network or importation of sexually explicit, drug related or other offensive materials into the course environment. Plagiarism, or the act of presenting other people’s ideas/writings without giving credit to these sources, is academically dishonest and can carry severe consequences, up to removal from class.</p>
+      <br>
+      <aside><b>Refund Policy</b></aside>
+      <aside>You are not entitled to any refund from Bottega except as set forth below.</aside>
+      <ul>
+        <li>A three-business day cooling-off period, commencing with the day an enrollment agreement with the applicant is signed or an initial deposit or payment toward tuition and fees of the institution is made, until midnight of the third business day following such date, or from the date that the student first visits the institution, whichever is later, during which time the contract may be rescinded and all monies paid refunded. Evidence of personal appearance at the institution or a deposit of a written statement of withdrawal for delivery by mail or other means shall be deemed as meeting the terms of the cooling off period. </li>
+        <li>Cancellation: An applicant who provides written notice of cancellation at least one week (7 calendar days) prior to the first day of class is entitled to a refund of all monies paid, less the non-refundable deposit, provided that you first return all program materials and supplies as set forth in subsection (c) below. Students who cancel after this date are not entitled to a refund.</li>
+        <li>A student enrolled in a correspondence institution may withdraw from enrollment following the cooling-off period, prior to submission by the student of any lesson materials or prior to receipt of course materials, whichever comes first, and effective upon deposit of a written statement of withdrawal for delivery by mail or other means, and the institution shall be entitled to retain no more than $250 in tuition or fees as registration charges or an alternative amount that the institution can demonstrate to have been expended in preparation for that particular student’s enrollment.</li>
+        <li>Early Termination: A student terminated by Bottega for misconduct is only entitled to a prorated refund for the future portion of their program as of the notice of termination.</li>
+        <li>Materials: Before receiving any refunds, you must first return any and all program materials and supplies received from Bottega. If not hand delivered, materials must be sent to Bottega at your expense, insured and tracked through the carrier. After returning any program materials to Bottega, you must also destroy all copies of program materials you may have, including all downloaded copies, backup copies, printed or written copies, and derivative works of any kind.</li>
+      </ul>
+
+      <aside><b>NOTICE TO BUYER:</b></aside>
+      <ul>
+       <li>Do not sign this agreement before you have read it or if it contains any blank spaces.
+       <li>This agreement is a legally binding instrument. Both sides of the contract are binding only when the agreement is accepted, signed, and dated by an authorized official of Bottega or the admissions officer at Bottega’s principal place of business.</li>
+       <li>You are entitled to an exact copy of this agreement and any disclosure pages you sign.</li>
+       <li>Bottega reserves the right to terminate a student's training for unsatisfactory progress, non-payment of tuition or failure to abide established standards of conduct.</li>
+       <li>Bottega has articulation agreements with selected universities. Please consult the most recent list of university partners for details. Bottega does not otherwise guarantee the transferability of credits to a college, university or institution. Any decision on the comparability, appropriateness and applicability of credit and whether they should be accepted is the decision of the receiving institution.</li>
+       <li>Under no circumstances shall Bottega be liable for any damages, including direct, incidental, special, consequential or punitive damages that result from this agreement, or your enrollment in its programs or from other Bottega services, even if Bottega has been advised of the possibility of such damages. In no event shall Bottega’s total liability to you for all damages, losses, and causes of action, whether in contract, tort or otherwise, exceed the amounts paid by you to Bottega.</li>
+       <li>This Agreement shall be governed by the laws of the State of Utah. The parties agree that venue shall be in Utah courts for any disputes arising between the parties and both parties agree to the personal jurisdiction and venue of such courts and waive any right to assert otherwise. In any action between the parties, which arises out of or relates to this Agreement, the prevailing party, in addition to all other rights or remedies, shall be entitled to an award of its costs incurred in connection with the action, including reasonable attorney's fees and costs.</li>
+       <li>This Agreement may not be modified or amended except in writing signed by the parties hereto and specifically referring to this Agreement. If any provision of this Agreement is found to be void or unenforceable, such provision shall be modified to the minimum extent necessary to make it valid and enforceable; or, if it cannot be so modified, it shall be severed and the other provisions of this Agreement shall remain in full force and effect.</li>
+      </ul>
 
 
 
 
 
 
-<aside><b>STUDENT ACKNOWLEDGMENTS:</b></aside>
-<ul>
-  <li>I have carefully read and will download my own personal copy of this enrollment agreement  after signing it.</li>
-  <li>I understand that the school may terminate my enrollment if I fail to comply with attendance, academic, and financial requirements or if I fail to abide by established standards of conduct. While enrolled in the school, I understand that I must maintain satisfactory academic progress as described in the school catalog and that my financial obligation to the school must be paid in full before a certificate may be awarded.</li>
-  <li>The application and enrollment agreement is true and correct to the best of my knowledge and may be relied upon by Bottega. I hereby authorize Bottega and its designated agents and representatives to conduct comprehensive reviews of my credit history causing such consumer reports to be generated as Bottega deems necessary in connection with the review of the application and/or the collection of any credit extended in reliance on the application. I further authorize any person, consumer reporting agency, firm, corporation or public agency to divulge to Bottega or its designated agents or representatives any and all information pertaining to me that it may have or obtain in response to such inquiries, whether verbal or written.</li> 
-  <li>Finally, I hereby release Bottega and its officers, directors, shareholders, agents, and representatives from any and all liability for damages of any kind, which may result to me from the actions authorized by this release. A photocopy or facsimile of this form shall be treated as an original.</li>
-</ul>
+      <aside><b>STUDENT ACKNOWLEDGMENTS:</b></aside>
+      <ul>
+        <li>I have carefully read and will download my own personal copy of this enrollment agreement  after signing it.</li>
+        <li>I understand that the school may terminate my enrollment if I fail to comply with attendance, academic, and financial requirements or if I fail to abide by established standards of conduct. While enrolled in the school, I understand that I must maintain satisfactory academic progress as described in the school catalog and that my financial obligation to the school must be paid in full before a certificate may be awarded.</li>
+        <li>The application and enrollment agreement is true and correct to the best of my knowledge and may be relied upon by Bottega. I hereby authorize Bottega and its designated agents and representatives to conduct comprehensive reviews of my credit history causing such consumer reports to be generated as Bottega deems necessary in connection with the review of the application and/or the collection of any credit extended in reliance on the application. I further authorize any person, consumer reporting agency, firm, corporation or public agency to divulge to Bottega or its designated agents or representatives any and all information pertaining to me that it may have or obtain in response to such inquiries, whether verbal or written.</li> 
+        <li>Finally, I hereby release Bottega and its officers, directors, shareholders, agents, and representatives from any and all liability for damages of any kind, which may result to me from the actions authorized by this release. A photocopy or facsimile of this form shall be treated as an original.</li>
+      </ul>
 
-<br>
+      <br>
 
 
 
-<aside><em>Signature page follows.</em></aside>
-<p><em>I, the undersigned, have read, understand and agree to abide by all the provisions set forth in the foregoing enrollment agreement.</em></p>
-<aside><b>ACCEPTANCE</b></aside>
-<br>
-<aside>STUDENT</aside>
-<aside>Printed Name: ______________________________________</aside>
-<aside>Signature:  ______________________________________</aside>
-<aside>Date Signed:  ______________________________________</aside>
-<br>
-<aside>BOTTEGA ADMISSIONS REPRESENTATIVE</aside>
-<aside>Printed Name: ______________________________________</aside>
-<aside>Signature:  ______________________________________</aside>
-<aside>Date Signed:  ______________________________________</aside>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+      <aside><em>Signature page follows.</em></aside>
+      <p><em>I, the undersigned, have read, understand and agree to abide by all the provisions set forth in the foregoing enrollment agreement.</em></p>
+      <aside><b>ACCEPTANCE</b></aside>
+      <br>
+      <aside>STUDENT</aside>
+      <aside>Printed Name: ______________________________________</aside>
+      <aside>Signature:  ______________________________________</aside>
+      <aside>Date Signed:  ______________________________________</aside>
+      <br>
+      <aside>BOTTEGA ADMISSIONS REPRESENTATIVE</aside>
+      <aside>Printed Name: ______________________________________</aside>
+      <aside>Signature:  ______________________________________</aside>
+      <aside>Date Signed:  ______________________________________</aside>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       </p>
+     </div> 
     </div>
   </div>
 </div>
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>F name:</strong>
-  <%= @student.f_name %>
-</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="card">
+      <header2>
+        <div class="form-header"><p>Application Fee Payment_</p></div>
+      </header2>
+      <div class="cardtext">
+        <p>Please enter your credit card information below</p> <p>Application Fee: $35.00</p>
+        <div class="field"> 
+          <br />
+          <%= select_month nil, {add_month_numbers: true}, {name: 'creditcard[month]', id: "card_month"} %>
+          <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: 'creditcard[year]', id: "card_year"} %>
+        </div>
+        <div id="new-form-card">        
+        </div>
+     </div> 
+    </div>
+</div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-<p>
-  <strong>L name:</strong>
-  <%= @student.l_name %>
-</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @student.phone %>
-</p>
 
-<p>
-  <strong>Address one:</strong>
-  <%= @student.address_one %>
-</p>
 
-<p>
-  <strong>Address two:</strong>
-  <%= @student.address_two %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @student.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @student.state %>
-</p>
-
-<p>
-  <strong>Zip:</strong>
-  <%= @student.zip %>
-</p>
-
-<p>
-  <strong>Dob:</strong>
-  <%= @student.dob %>
-</p>
-
-<p>
-  <strong>Course:</strong>
-  <%= @student.course %>
-</p>
-
-<p>
-  <strong>Military status:</strong>
-  <%= @student.military_status %>
-</p>
-
-<p>
-  <strong>Education:</strong>
-  <%= @student.education %>
-</p>
-
-<p>
-  <strong>Experience:</strong>
-  <%= @student.experience %>
-</p>
-
-<p>
-  <strong>Employment status:</strong>
-  <%= @student.employment_status %>
-</p>
-
-<p>
-  <strong>Salary:</strong>
-  <%= @student.salary %>
-</p>
 
 <%= link_to 'Back', edit_student_path(@student) %>
